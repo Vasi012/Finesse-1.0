@@ -1,40 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<div class="container-wrapper">
-    <div class="hero-img"></div>
-    <div class="content-wrapper main-column">
-        <div class="text-area content">
-            <!--Title and about us sections-->
-            <h1 class="text-center">Welcome to Finesse</h1>
-            <div>
-                <p>
-                    Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam
-                    est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam
-                    [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem.Sed ut
-                    perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                    rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
-                    sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed
-                    quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam
-                    est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam
-                    [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-                <p>
-                    Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam
-                    est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam
-                    [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-                <h1>TBC - vasi!</h1>
-            </div>
+{% load static %}
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+            <img src="{% static 'images/one.webp' %}" class="d-block w-100" alt="Carousel slide 1 (wedding)">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="{% static 'images/two.webp' %}" class="d-block w-100" alt="Carousel slide 2 (gathering)">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="{% static 'images/three.webp' %}" class="d-block w-100" alt="Carousel slide 3 (cake bar)">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="{% static 'images/four.webp' %}" class="d-block w-100" alt="Carousel slide 4 (disco ball)">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="{% static 'images/five.webp' %}" class="d-block w-100"
+                alt="Carousel slide 5 (led lights on wall)">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="{% static 'images/six.webp' %}" class="d-block w-100" alt="Carousel slide 6 (dj pit)">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="{% static 'images/seven.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
         </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
 
 {%endblock%}

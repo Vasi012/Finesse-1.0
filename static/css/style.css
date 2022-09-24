@@ -8,14 +8,12 @@
     padding-top: 0;
 }
 
-img, svg {
-    vertical-align: middle;
-    max-width: 11rem;
-    margin-left: 25px;
-}
-
 .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link, .navbar-toggler, .navbar-toggler-icon {
     color: rgb(255 255 255 / 90%);
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 0;
 }
 
 .footer {
