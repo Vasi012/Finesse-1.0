@@ -1,8 +1,43 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
-.img, svg {
-    max-width: 53%;
+.navbar {
+    --bs-navbar-padding-y: 0;
 }
+.container-fluid {
+    background-color: #590085;
+    padding-top: 0;
+}
+
+img, svg {
+    vertical-align: middle;
+    max-width: 11rem;
+    margin-left: 25px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link, .navbar-toggler, .navbar-toggler-icon {
+    color: rgb(255 255 255 / 90%);
+}
+
 .footer {
-    color: red;
+    background-color: #590085;
+}
+
+.smedia {
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-right: 15px;
+}
+
+/* Media queries */
+@media screen and (max-width: 400px) {
+    img, svg {
+        max-width: 10rem;
+        margin-left: 0;
+    }
 }
