@@ -2,6 +2,7 @@
 
 {% block content %}
 {% load static %}
+<!--Carousel Hero-->
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="3000">
@@ -36,6 +37,7 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+<!--Welcome message-->
 <div class="container">
     <br>
     <h1 class="welcome lead">Welcome to your event management platform</h1>
@@ -57,12 +59,62 @@
                 account and visualise the progress of your request live. <br> Sing up for our newsletters where you can
                 see
                 all the past events that have took place with our presence. </p>
-            <a href="#" class="btn btn-info fw-bold">Get in touch today!</a>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Get in touch today!
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Contact Us</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">First Name:</label>
+                                <input type="fname" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="John" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Second Name:</label>
+                                <input type="lname" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Smith" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="+ 47700 000 00" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email address:</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="name@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">What type of event you
+                                    looking for?</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
+                                    placeholder="Type what type of event are you interested in and when you can be contacted by one of our representative."
+                                    required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <br>
     <br>
-
+    <!--Cards describing content of the website-->
     <div class="row text-center">
 
         <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
@@ -185,6 +237,7 @@
         <br>
 
     </div>
+    <!--End message-->
     <h2 class="welcome"><em>You have an event soon and you think you cannot manage?</em> We are here to
         handel it
         for
