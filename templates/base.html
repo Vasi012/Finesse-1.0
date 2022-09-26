@@ -35,7 +35,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
 </head>
+{% if messages %}
+<div class="message-container">
+    {% for message in messages %}
+    <div class="toast custom-toast rounded-10 border-top-0 text-center" id="liveToast" data-autohide="false">
+        <div class="toast-header bg-white text-dark">
+            <strong class="mr-auto">Finesse:</strong>
+        </div>
+        <div class="toast-body bg-white">
+            {{ message }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
 
 <body class="d-flex flex-column min-vh-100">
     <!--Header / Navbar-->
@@ -54,8 +71,10 @@
     {% include 'includes/footer.html' %}
 
     {% block extra_js %}
-    <script>
-
+    <script type="text/javascript">
+        const toastLiveExample = document.getElementById('liveToast')
+        const toast = new bootstrap.Toast(toastLiveExample)
+        toast.show()
     </script>
     {% endblock %}
 </body>

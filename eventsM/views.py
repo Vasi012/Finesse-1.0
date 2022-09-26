@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render
 from django.core.mail import send_mail
-
+from django.contrib import messages
 
 def index(request):
     if request.method == 'POST':
@@ -20,8 +20,9 @@ def index(request):
                 '''.format(data['message'], data['email'])
         print(data)
         send_mail(f'Customer Query: { data["name"] }', data['message'],
-                  data["email"], ['eventswithfinesse1@gmail.com'], 
-                  fail_silently=False)
+                  data["email"], ['eventswithfinesse1@gmail.com'],
+                  fail_silently=False,)
+        messages.success(request, 'Contact Form sent successfully!')
     return render(request, 'eventsM/index.html', {})
 
 

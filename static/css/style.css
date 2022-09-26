@@ -51,10 +51,14 @@ a {
         font-weight: bolder;
 }
 
-/* Media queries */
-@media screen and (max-width: 400px) {
-    img, svg {
-        max-width: 10rem;
-        margin-left: 0;
-    }
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999;
 }
+
+.custom-toast {
+    overflow: visible;
+}
+

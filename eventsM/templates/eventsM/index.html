@@ -50,13 +50,13 @@
             <h5 class="card-title fw-bold">About us</h5>
             <p class="card-text">Finesse, a event management platform, build to amaze and bring all the special moments
                 to real life, from a dinner in two to a fully sold ticket festival, our management team will handle
-                everything from where will be to how will be and how you will feel after. <br> Our happy customisers
+                everything from where will be to how will be and how you will feel after. <br> Our happy customizes
                 have
                 rated us to 5 stars for our professionalism and past achievements. <br> Have a future event in mind? Get
                 in
                 touch wit us and one of our representations will talk you through all the steps required. <br> You can
                 create an
-                account and visualise the progress of your request live. <br> Sing up for our newsletters where you can
+                account and visualize the progress of your request live. <br> Sing up for our newsletters where you can
                 see
                 all the past events that have took place with our presence. </p>
             <!-- Button trigger modal -->
@@ -79,8 +79,8 @@
                             <div class="modal-body">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">Full Name:</label>
-                                    <input type="text" name="full-name" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="John Smith" required>
+                                    <input type="text" name="full-name" class="form-control"
+                                        id="exampleFormControlInput1" placeholder="John Smith" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">Email address:</label>
@@ -90,7 +90,8 @@
                                 <div class="mb-3">
                                     <label for="exampleFormControlTextarea1" class="form-label">What type of event you
                                         looking for?</label>
-                                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="6"
+                                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
+                                        rows="6"
                                         placeholder="Type what type of event are you interested in and when you can be contacted by one of our representative."
                                         required></textarea>
                                 </div>
@@ -98,145 +99,145 @@
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-success">Send</button>
+                                <button type="submit" class="btn btn-success" id="liveToastBtn">Send</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>
+        </div>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<!--Cards describing content of the website-->
+<div class="row text-center">
+
+    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card1.webp' %}" class="d-block w-100" alt="Cocktails">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Cocktails</h5>
+            <p class="card-text">Finesse comes with it's own bartenders. <br> Our bartenders have years of
+                experience in handling the softest drinks, from a perfect pint of beer to a lovely cocktail. <br>
+                Our bartenders are trained and professional which will actually help you to enjoy your next party.
+                <br>Drink responsibly! <br> <em><strong>All alcohol drinks must be served by Adults.
+                        18+</strong></em>
+                </en>
+            </p>
         </div>
     </div>
     <br>
+
     <br>
-    <!--Cards describing content of the website-->
-    <div class="row text-center">
-
-        <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-            <img src="{% static 'images/card1.webp' %}" class="d-block w-100" alt="Cocktails">
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Cocktails</h5>
-                <p class="card-text">Finesse comes with it's own bartenders. <br> Our bartenders have years of
-                    experience in handling the softest drinks, from a perfect pint of beer to a lovely cocktail. <br>
-                    Our bartenders are trained and professional which will actually help you to enjoy your next party.
-                    <br>Drink responsibly! <br> <em><strong>All alcohol drinks must be served by Adults.
-                            18+</strong></em>
-                    </en>
-                </p>
-            </div>
+    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card2.webp' %}" class="d-block w-100" alt="Together">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Together</h5>
+            <p class="card-text">Finesse makes sure to bring every moment to life, even a proposal for the person
+                that you always dreamed to be by your side. <br>
+                <em>Together</em>, we will create exactly as you dreamed off, to make every moment last, forever.
+                <br>
+                Choose Finesse for your proposal and we will provide all the arrangements, we goth you, <strong>just
+                    enjoy the moment</strong>.
+            </p>
         </div>
-        <br>
-
-        <br>
-        <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-            <img src="{% static 'images/card2.webp' %}" class="d-block w-100" alt="Together">
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Together</h5>
-                <p class="card-text">Finesse makes sure to bring every moment to life, even a proposal for the person
-                    that you always dreamed to be by your side. <br>
-                    <em>Together</em>, we will create exactly as you dreamed off, to make every moment last, forever.
-                    <br>
-                    Choose Finesse for your proposal and we will provide all the arrangements, we goth you, <strong>just
-                        enjoy the moment</strong>.
-                </p>
-            </div>
-        </div>
-        <br>
-
-        <br>
-        <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-            <img src="{% static 'images/card3.webp' %}" class="d-block w-100" alt="Happy Moments">
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Happy Moments</h5>
-                <p class="card-text">Make your anniversary unique with Finesse, bring life in the small gesture. It’s
-                    time for that holiday to you thought of long time ago.<br> Contact us today and we will advice and
-                    help you achieve all that you want. <strong>Make each moment <em>Finesse</em> !</strong> </p>
-            </div>
-        </div>
-        <br>
-
-        <br>
-        <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-            <img src="{% static 'images/card4.webp' %}" class="d-block w-100" alt="Special Wedding">
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Special Wedding</h5>
-                <p class="card-text">It is hard to take care of every detail alone, it is hard even to believe that you
-                    can do everything alone, that is why we are here.<br> <em>Finesse</em> is here to bring everything
-                    to
-                    life, from inviting the long list of relatives to the first dance <em>together</em> . <br>
-                    <strong>Live the moments that matters! </strong><br> <em>Let us handle the rest!</em> </p>
-            </div>
-        </div>
-        <br>
-
-
-        <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-            <img src="{% static 'images/card8.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Cupcakes Bar</h5>
-                <p class="card-text">Our chefs knows how to make each moment special, and very sweet! <br> Try our
-                    cupcakes bar made by specialists for every important moment of your life. <br> <strong>Choose
-                        Finesse, choose professionalism </strong> .</p>
-            </div>
-            <br>
-
-            <br>
-        </div>
-        <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-            <img src="{% static 'images/card9.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Fireworks</h5>
-                <p class="card-text">We know how to woke up that beast, how to bring every moment to the next level,
-                    <strong>we know how to make atmosphere.</strong> <br> Live your next experience with finesse, and
-                    enjoy our fireworks and lighting systems, designed for you. <br> <em>Woke the animal inside you</em>
-                    !
-                    <br> And bring it with you to the party! Let us handle all the tasks and you enjoy the party! </p>
-            </div>
-        </div>
-
-        <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-            <img src="{% static 'images/card6.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Concert</h5>
-                <p class="card-text">A warm, calming feeling envelops your body as you and the hundreds if not thousands
-                    of people surrounding you sing along with one of your favorite artists to their biggest hit. <br>
-                    Make each concert to be the best of your life, organize the best concert, bring the most popular
-                    artists to sing live, make all the attendees to enjoy the concert!<br> Finesse, <em> live the
-                        moment!</em></p>
-            </div>
-        </div>
-
-        <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-            <img src="{% static 'images/card11.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Clubbing Nights</h5>
-                <p class="card-text">Strobe lights, speakers, a stage, bars with bar stools, small round tables with
-                    stools, waitresses dressed skimpily with glowing trays of drinks or shooters or empty
-                    bottles/glasses, shots lined up at the bar, bartenders, bottles of booze lined up…<br>Loud music,
-                    laughter, DJ announcements coming over the loud speaker, mugs clunking against a table, the hiss of
-                    pop filling a glass at the bar…<br> <strong>Dreams coming throughout <em>Finesse</em></strong></p>
-            </div>
-        </div>
-        <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-            <img src="{% static 'images/cardseven.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
-            <div class="card-body">
-                <h5 class="card-title fw-bold">Love</h5>
-                <p class="card-text">Deep love is <strong>seeing someone at their most vulnerable, often lowest point,
-                        and reaching out your hand to help them get back up.</strong> <br> Because deep love is
-                    selfless. <br>It's realizing there's someone out there that you don't think twice about caring for.
-                    <br> Caring for them is as involuntary as breathing. <br>Live the moment with Finesse!</p>
-            </div>
-        </div>
-        <br>
-
-        <br>
-
     </div>
-    <!--End message-->
-    <h2 class="welcome"><em>You have an event soon and you think you cannot manage?</em> We are here to
-        handel it
-        for
-        you!</h2>
+    <br>
+
+    <br>
+    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card3.webp' %}" class="d-block w-100" alt="Happy Moments">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Happy Moments</h5>
+            <p class="card-text">Make your anniversary unique with Finesse, bring life in the small gesture. It’s
+                time for that holiday to you thought of long time ago.<br> Contact us today and we will advice and
+                help you achieve all that you want. <strong>Make each moment <em>Finesse</em> !</strong> </p>
+        </div>
+    </div>
+    <br>
+
+    <br>
+    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card4.webp' %}" class="d-block w-100" alt="Special Wedding">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Special Wedding</h5>
+            <p class="card-text">It is hard to take care of every detail alone, it is hard even to believe that you
+                can do everything alone, that is why we are here.<br> <em>Finesse</em> is here to bring everything
+                to
+                life, from inviting the long list of relatives to the first dance <em>together</em> . <br>
+                <strong>Live the moments that matters! </strong><br> <em>Let us handle the rest!</em> </p>
+        </div>
+    </div>
+    <br>
 
 
+    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card8.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Cupcakes Bar</h5>
+            <p class="card-text">Our chefs knows how to make each moment special, and very sweet! <br> Try our
+                cupcakes bar made by specialists for every important moment of your life. <br> <strong>Choose
+                    Finesse, choose professionalism </strong> .</p>
+        </div>
+        <br>
 
-    {%endblock%}
+        <br>
+    </div>
+    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card9.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Fireworks</h5>
+            <p class="card-text">We know how to woke up that beast, how to bring every moment to the next level,
+                <strong>we know how to make atmosphere.</strong> <br> Live your next experience with finesse, and
+                enjoy our fireworks and lighting systems, designed for you. <br> <em>Woke the animal inside you</em>
+                !
+                <br> And bring it with you to the party! Let us handle all the tasks and you enjoy the party! </p>
+        </div>
+    </div>
+
+    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card6.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Concert</h5>
+            <p class="card-text">A warm, calming feeling envelops your body as you and the hundreds if not thousands
+                of people surrounding you sing along with one of your favorite artists to their biggest hit. <br>
+                Make each concert to be the best of your life, organize the best concert, bring the most popular
+                artists to sing live, make all the attendees to enjoy the concert!<br> Finesse, <em> live the
+                    moment!</em></p>
+        </div>
+    </div>
+
+    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card11.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Clubbing Nights</h5>
+            <p class="card-text">Strobe lights, speakers, a stage, bars with bar stools, small round tables with
+                stools, waitresses dressed skimpily with glowing trays of drinks or shooters or empty
+                bottles/glasses, shots lined up at the bar, bartenders, bottles of booze lined up…<br>Loud music,
+                laughter, DJ announcements coming over the loud speaker, mugs clunking against a table, the hiss of
+                pop filling a glass at the bar…<br> <strong>Dreams coming throughout <em>Finesse</em></strong></p>
+        </div>
+    </div>
+    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+        <img src="{% static 'images/cardseven.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Love</h5>
+            <p class="card-text">Deep love is <strong>seeing someone at their most vulnerable, often lowest point,
+                    and reaching out your hand to help them get back up.</strong> <br> Because deep love is
+                selfless. <br>It's realizing there's someone out there that you don't think twice about caring for.
+                <br> Caring for them is as involuntary as breathing. <br>Live the moment with Finesse!</p>
+        </div>
+    </div>
+    <br>
+
+    <br>
+
+</div>
+<!--End message-->
+<h2 class="welcome"><em>You have an event soon and you think you cannot manage?</em> We are here to
+    handel it
+    for
+    you!</h2>
+
+
+{%endblock%}
