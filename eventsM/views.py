@@ -1,4 +1,27 @@
 from django.views.generic import TemplateView
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.core.mail import send_mail
+
+
+def index(request):
+    if request.method == 'POST':
+        name = request.POST.get('full-name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        data = {
+            'name': name,
+            'email': email,
+            'message': message
+        }
+        message = '''
+                New message: {}
+                From: {}
+                '''.format(data['message'], data['email'])
+        print(data)
+        send_mail('Customer Info', data['message'], data['email'], ['eventswithfinesse1@gmail.com'], fail_silently=False)
+    return render(request, 'eventsM/index.html', {})
 
 
 class HomeView(TemplateView):

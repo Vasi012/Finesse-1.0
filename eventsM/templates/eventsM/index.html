@@ -64,52 +64,46 @@
                 Get in touch today!
             </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Contact Us</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">First Name:</label>
-                                <input type="fname" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="John" required>
+            <!-- Modal Form -->
+            <form action="" method="POST" class="contact-form">
+                {% csrf_token %}
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Contact Us</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Second Name:</label>
-                                <input type="lname" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Smith" required>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Full Name:</label>
+                                    <input type="text" name="full-name" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="John Smith" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email address:</label>
+                                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="name@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">What type of event you
+                                        looking for?</label>
+                                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="6"
+                                        placeholder="Type what type of event are you interested in and when you can be contacted by one of our representative."
+                                        required></textarea>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="+ 47700 000 00" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Email address:</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="name@example.com" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">What type of event you
-                                    looking for?</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
-                                    placeholder="Type what type of event are you interested in and when you can be contacted by one of our representative."
-                                    required></textarea>
-                            </div>
-                        </div>
 
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-success">Send</button>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-success">Send</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <br>
