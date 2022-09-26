@@ -1,5 +1,4 @@
 from django.views.generic import TemplateView
-from django.http import HttpResponse
 from django.shortcuts import render
 from django.core.mail import send_mail
 
@@ -20,7 +19,9 @@ def index(request):
                 From: {}
                 '''.format(data['message'], data['email'])
         print(data)
-        send_mail('Customer Info', data['message'], data['email'], ['eventswithfinesse1@gmail.com'], fail_silently=False)
+        send_mail(f'Customer Query: { data["name"] }', data['message'],
+                  data["email"], ['eventswithfinesse1@gmail.com'], 
+                  fail_silently=False)
     return render(request, 'eventsM/index.html', {})
 
 
