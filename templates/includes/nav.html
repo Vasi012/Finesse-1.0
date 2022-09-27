@@ -5,7 +5,9 @@
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" href="{% url 'eventsM' %}">
-                <img src="{% static 'images/logo.webp' %}" alt="Finesse logo">
+                <div class="heroimg">
+                    <img src="{% static 'images/logo.webp' %}" alt="Finesse logo">
+                </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -27,4 +29,5 @@
             </div>
         </div>
     </nav>
+
 </header>
