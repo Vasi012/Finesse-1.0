@@ -240,4 +240,65 @@
     you!</h2>
 
 
+    {% if user.is_authenticated %}
+
+    <h6 class="text-center">Write a review and rate your experience with <strong>Finesse</strong>!</h6>
+
+    <div class="scrollmenu">
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#support">Support</a>
+        <a href="#blog">Blog</a>
+        <a href="#tools">Tools</a>  
+        <a href="#base">Base</a>
+        <a href="#custom">Custom</a>
+        <a href="#more">More</a>
+        <a href="#logo">Logo</a>
+        <a href="#friends">Friends</a>
+        <a href="#partners">Partners</a>
+        <a href="#people">People</a>
+        <a href="#work">Work</a>
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#support">Support</a>
+        <a href="#blog">Blog</a>
+        <a href="#tools">Tools</a>  
+        <a href="#base">Base</a>
+        <a href="#custom">Custom</a>
+        <a href="#more">More</a>
+        <a href="#logo">Logo</a>
+        <a href="#friends">Friends</a>
+        <a href="#partners">Partners</a>
+        <a href="#people">People</a>
+        <a href="#work">Work</a>
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#support">Support</a>
+        <a href="#blog">Blog</a>
+        <a href="#tools">Tools</a>  
+        <a href="#base">Base</a>
+        <a href="#custom">Custom</a>
+        <a href="#more">More</a>
+        <a href="#logo">Logo</a>
+        <a href="#friends">Friends</a>
+        <a href="#partners">Partners</a>
+        <a href="#people">People</a>
+        <a href="#work">Work</a>
+      </div>
+
+      <p class="text-center">Thank you for leaving us a review!</p>
+
+
+    {% else %}
+
+    <p class="text-center">Sign in to see and add a review.</p>
+
+    {% endif %}
+
+
 {%endblock%}
