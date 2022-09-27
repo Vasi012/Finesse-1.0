@@ -73,8 +73,10 @@
     {% block extra_js %}
     <script type="text/javascript">
         const toastLiveExample = document.getElementById('liveToast')
-        const toast = new bootstrap.Toast(toastLiveExample)
-        toast.show()
+        if (toastLiveExample){
+            const toast = new bootstrap.Toast(toastLiveExample)
+            toast.show()
+        }
     </script>
     {% endblock %}
 </body>
