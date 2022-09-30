@@ -1,14 +1,56 @@
+{% load static %}
 <footer class="mt-auto py-3 footer justify-content-center">
 
     <div class="row text-center mt-3 mb-3">
-        <div class="col-12 order-2 order-sm-1 col-sm-4">
-            <button class="btn btn-hours" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight">Working Hours</button>
+        <div class="col-12 order-2 order-sm-1 col-sm-4" style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    ">
 
+            <!-- News Letter sign up -->
+
+            <button class="btn btn-hours mb-3" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Subscribe to our
+                Newsletter</button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <div class="offcanvas-header">
+                    {% if user.is_authenticated %}
+                    <form enctype="multipart/form-data" method="POST" action="" style="text-align: center;">
+                        {% csrf_token %}
+                        <div class="form-group  text-center mb-2">
+                            <br>
+                            <label>Subscribe to our Newsletter.</label>
+                            <input type="email" class="form-control" id="userEmail" placeholder="Enter email" required>
+                            <small style="font-weight: 600;color: red;" class="error"></small>
+                            <input type="text" class="form-control mt-2" id="userName" placeholder="Enter name"
+                                required>
+                            <small style="font-weight: 600;color: green;" class="success"></small>
+                        </div>
+                        <input type="submit" value="Subscribe" id="submit" class="btn" disabled>
+                    </form>
+                    {% else %}
+                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Please Log in or Register your account to
+                        have access to this section.
+                    </h5>
+                    {% endif %}
+                </div>
+
+                <div class="offcanvas-body">
+                    <p>Subscribe to our Newsletter to be always updated whit what is happening around Finesse company.
+                    </p>
+                </div>
+            </div>
+
+            <button class="btn btn-hours mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">Working Hours</button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
                 aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
-                    <h5 id="offcanvasRightLabel text-center">Our Working Hours are:</h5>
+                    <h5 id="offcanvasRightLabel text-center"><br> <br> <br> Our Working Hours are:</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -52,5 +94,7 @@
             </a>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 
 </footer>
