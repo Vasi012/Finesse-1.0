@@ -133,7 +133,7 @@ a {
     background-color: #8f00d6;
 }
 
-    .scrollmenu {
+.scrollmenu {
     background-color: #333;
     overflow: auto;
     white-space: nowrap;
@@ -165,7 +165,7 @@ a {
 
 .author {
     color: white;
-    margin: 4px;
+    margin: 0px;
     text-transform: uppercase;
 }
 
@@ -179,7 +179,7 @@ a {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #8f00d6;
     color: white;
     position: relative;
 }
@@ -196,7 +196,7 @@ a {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #8f00d6;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -205,7 +205,7 @@ a {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #8f00d6;
 }
 
 .post-link:hover,
@@ -230,7 +230,7 @@ a {
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #8f00d6;
     text-decoration: underline;
 }
 
