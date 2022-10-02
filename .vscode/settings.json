@@ -25,7 +25,9 @@
    "terminal.integrated.gpuAcceleration": "canvas",
    "editor.defaultFormatter": "HookyQR.beautify",
    "cSpell.words": [
+      "allauth",
       "cloudinary",
-      "herokuapp"
+      "herokuapp",
+      "socialaccount"
    ]
 }
