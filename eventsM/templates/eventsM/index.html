@@ -6,26 +6,25 @@
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="3000">
-            <img src="{% static 'images/one.webp' %}" class="d-block w-100" alt="Carousel slide 1 (wedding)">
+            <img src="{% static 'images/one.webp' %}" class="d-block w-100" alt="wedding picture">
         </div>
         <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/two.webp' %}" class="d-block w-100" alt="Carousel slide 2 (gathering)">
+            <img src="{% static 'images/two.webp' %}" class="d-block w-100" alt="gathering with a glass of champagne">
         </div>
         <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/three.webp' %}" class="d-block w-100" alt="Carousel slide 3 (cake bar)">
+            <img src="{% static 'images/three.webp' %}" class="d-block w-100" alt="cake bar with a lot of cake">
         </div>
         <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/four.webp' %}" class="d-block w-100" alt="Carousel slide 4 (disco ball)">
+            <img src="{% static 'images/four.webp' %}" class="d-block w-100" alt="disco ball on the sealing">
         </div>
         <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/five.webp' %}" class="d-block w-100"
-                alt="Carousel slide 5 (led lights on wall)">
+            <img src="{% static 'images/five.webp' %}" class="d-block w-100" alt="led lights on wall of a club">
         </div>
         <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/six.webp' %}" class="d-block w-100" alt="Carousel slide 6 (dj pit)">
+            <img src="{% static 'images/six.webp' %}" class="d-block w-100" alt="dj pit in the club">
         </div>
         <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/seven.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+            <img src="{% static 'images/seven.webp' %}" class="d-block w-100" alt="bacardi drink in a glass">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -65,10 +64,10 @@
             </button>
 
             <!-- Modal Form -->
-            <form action="" method="POST" class="contact-form">
+            <form method="POST" class="contact-form">
                 {% csrf_token %}
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -78,22 +77,29 @@
                             </div>
                             <div class="modal-body">
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Full Name:</label>
+                                    <label for="exampleFormControlInput1" class="form-label" aria-label="Full-name">Full
+                                        Name:
                                     <input type="text" name="full-name" class="form-control"
-                                        id="exampleFormControlInput1" placeholder="John Smith" required>
+                                        id="exampleFormControlInput1" placeholder="John Smith"
+                                        required>
+                                    </label>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Email address:</label>
-                                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                                    <label for="exampleFormControlEmail" class="form-label"
+                                        aria-label="Email Address">Email address:
+                                    <input type="email" name="email" class="form-control" id="exampleFormControlEmail"
                                         placeholder="name@example.com" required>
+                                    </label>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">What type of event you
-                                        looking for?</label>
+                                    <label for="exampleFormControlTextarea1" class="form-label"
+                                        aria-label="Type here the type of event you looking for">What type of event you
+                                        looking for?
                                     <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
                                         rows="6"
                                         placeholder="Type what type of event are you interested in and when you can be contacted by one of our representative."
                                         required></textarea>
+                                    </label>
                                 </div>
                             </div>
 
@@ -104,8 +110,8 @@
                         </div>
                     </div>
                 </div>
+            </form>
         </div>
-        </form>
     </div>
 </div>
 <br>
@@ -113,7 +119,7 @@
 <!--Cards describing content of the website-->
 <div class="row text-center">
 
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
         <img src="{% static 'images/card1.webp' %}" class="d-block w-100" alt="Cocktails">
         <div class="card-body">
             <h5 class="card-title fw-bold">Cocktails</h5>
@@ -122,14 +128,13 @@
                 Our bartenders are trained and professional which will actually help you to enjoy your next party.
                 <br>Drink responsibly! <br> <em><strong>All alcohol drinks must be served by Adults.
                         18+</strong></em>
-                </en>
             </p>
         </div>
     </div>
     <br>
 
     <br>
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
         <img src="{% static 'images/card2.webp' %}" class="d-block w-100" alt="Together">
         <div class="card-body">
             <h5 class="card-title fw-bold">Together</h5>
@@ -145,7 +150,7 @@
     <br>
 
     <br>
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
         <img src="{% static 'images/card3.webp' %}" class="d-block w-100" alt="Happy Moments">
         <div class="card-body">
             <h5 class="card-title fw-bold">Happy Moments</h5>
@@ -157,7 +162,7 @@
     <br>
 
     <br>
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
+    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
         <img src="{% static 'images/card4.webp' %}" class="d-block w-100" alt="Special Wedding">
         <div class="card-body">
             <h5 class="card-title fw-bold">Special Wedding</h5>
@@ -171,8 +176,8 @@
     <br>
 
 
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card8.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card8.webp' %}" class="d-block w-100" alt="cupcakes">
         <div class="card-body">
             <h5 class="card-title fw-bold">Cupcakes Bar</h5>
             <p class="card-text">Our chefs knows how to make each moment special, and very sweet! <br> Try our
@@ -183,8 +188,8 @@
 
         <br>
     </div>
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card9.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card9.webp' %}" class="d-block w-100" alt="fireworks">
         <div class="card-body">
             <h5 class="card-title fw-bold">Fireworks</h5>
             <p class="card-text">We know how to woke up that beast, how to bring every moment to the next level,
@@ -195,8 +200,8 @@
         </div>
     </div>
 
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card6.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card6.webp' %}" class="d-block w-100" alt="Concert">
         <div class="card-body">
             <h5 class="card-title fw-bold">Concert</h5>
             <p class="card-text">A warm, calming feeling envelops your body as you and the hundreds if not thousands
@@ -207,8 +212,8 @@
         </div>
     </div>
 
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card11.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
+        <img src="{% static 'images/card11.webp' %}" class="d-block w-100" alt="Clubbing Nights">
         <div class="card-body">
             <h5 class="card-title fw-bold">Clubbing Nights</h5>
             <p class="card-text">Strobe lights, speakers, a stage, bars with bar stools, small round tables with
@@ -218,8 +223,8 @@
                 pop filling a glass at the bar…<br> <strong>Dreams coming throughout <em>Finesse</em></strong></p>
         </div>
     </div>
-    <div class="card col-12 col-sm-12 col-md-4 col-lg-4 m-2" style="width: 35rem;">
-        <img src="{% static 'images/cardseven.webp' %}" class="d-block w-100" alt="Carousel slide 7 (drink)">
+    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
+        <img src="{% static 'images/cardseven.webp' %}" class="d-block w-100" alt="Couple in love">
         <div class="card-body">
             <h5 class="card-title fw-bold">Love</h5>
             <p class="card-text">Deep love is <strong>seeing someone at their most vulnerable, often lowest point,

@@ -4,7 +4,7 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
+    """Migration to database for blog posts"""
     dependencies = [
         ('eventsM', '0002_subscribedusers'),
     ]

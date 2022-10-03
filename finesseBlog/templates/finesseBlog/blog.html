@@ -16,10 +16,11 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="{% static 'images/holdr.JPG' %}">
+                                <img class="card-img-top" src="{% static 'images/holdr.JPG' %}"
+                                    alt="This is a placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                                    alt="Picture added by admin of website">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Admin: {{ post.author }}</p>
@@ -45,13 +46,17 @@
         </div>
     </div>
     {% if is_paginated %}
-    <nav aria-label="Page navigation">
+    <nav aria-label="Page navigation" style="
+    background-color: white;
+">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"
+                    style="color: #000000; background-color: white;">&laquo; PREV </a></li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"
+                    style="color: #000000; background-color: white;"> NEXT &raquo;</a></li>
 
             {% endif %}
         </ul>

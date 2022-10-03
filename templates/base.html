@@ -40,6 +40,7 @@
     </script>
 </head>
 {% if messages %}
+<!--Toast Message-->
 <div class="message-container">
     {% for message in messages %}
     <div class="toast custom-toast rounded-10 border-top-0 text-center" id="liveToast" data-autohide="false">
@@ -68,11 +69,11 @@
 
     <!--Footer-->
     {% include 'includes/footer.html' %}
-
+    <!--This is a toast-->
     {% block extra_js %}
-    <script type="text/javascript">
+    <script>
         const toastLiveExample = document.getElementById('liveToast')
-        if (toastLiveExample){
+        if (toastLiveExample) {
             const toast = new bootstrap.Toast(toastLiveExample)
             toast.show()
         }

@@ -6,10 +6,12 @@ from .forms import CommentForm
 
 
 def index(request):
+    """Request the view for blog.html"""
     return render(request, 'finesseBlog/blog.html')
 
 
 class PostList(generic.ListView):
+    """Post list on blog.html"""
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "finesseBlog/blog.html"
@@ -17,8 +19,9 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
-
+    """Alow users to see post details"""
     def get(self, request, slug, *args, **kwargs):
+        """We using get for blog posts"""
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
@@ -37,9 +40,9 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
-    def post(self, request, slug, *args, **kwargs):
 
+    def post(self, request, slug, *args, **kwargs):
+        """This function post or offer an error"""
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
@@ -71,8 +74,9 @@ class PostDetail(View):
 
 
 class PostLike(View):
-    
+    """This class counts and posts the likes"""
     def post(self, request, slug, *args, **kwargs):
+        """With this function user can like or remove its like"""
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)

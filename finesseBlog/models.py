@@ -7,6 +7,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
+    """Class post for blog posts"""
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -22,16 +23,20 @@ class Post(models.Model):
         User, related_name='blogpost_like', blank=True)
 
     class Meta:
+        """This class will order the posts"""
         ordering = ["-created_on"]
 
     def __str__(self):
+        """represents the class objects as a string"""
         return self.title
 
     def number_of_likes(self):
+        """Count number of likes"""
         return self.likes.count()
 
 
 class Comment(models.Model):
+    """Add comments and a max_length"""
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
     name = models.CharField(max_length=80)
@@ -41,7 +46,9 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
+        """This class will order the comments"""
         ordering = ["created_on"]
 
     def __str__(self):
+        """represents the class objects as a string"""
         return f"Comment {self.body} by {self.name}"

@@ -58,7 +58,11 @@ label {
 }
 
 .mb-auto {
-    margin-bottom: none;
+    margin-bottom: 0;
+}
+
+.mb-4 {
+    margin-top: 10px;
 }
 
 .btn-signup {
@@ -167,6 +171,7 @@ a {
     color: white;
     margin: 0px;
     text-transform: uppercase;
+    background-color: #590085;
 }
 
 .masthead {
@@ -251,11 +256,15 @@ a {
     justify-content: center;
 }
 
+.textarea {
+        max-width: 100%;
+}
+
 /*Media queries*/
 
 @media (max-width: 576px) {
     .row {
-        --bs-gutter-x: 0.rem;
+        --bs-gutter-x: 0rem;
     }
     .navbar-brand img:first-child {
         max-width: 12rem;

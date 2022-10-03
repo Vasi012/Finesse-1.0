@@ -28,6 +28,7 @@
       "allauth",
       "cloudinary",
       "herokuapp",
-      "socialaccount"
+      "socialaccount",
+      "whitenoise"
    ]
 }
