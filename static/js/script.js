@@ -1,6 +1,6 @@
 const validateEmail = function(email) {
     var formData = new FormData();
-    formData.append('email', email)
+    formData.append('email', email);
     $.ajaxSetup({
         headers: {
             "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value,
@@ -20,10 +20,10 @@ const validateEmail = function(email) {
         success: function (res) {
             $('.error').text(res.msg);
             if (res.msg){
-                $('#submit').prop('disabled', true)
+                $('#submit').prop('disabled', true);
             }
             else {
-                $('#submit').prop('disabled', false)
+                $('#submit').prop('disabled', false);
             }
         }
     });
