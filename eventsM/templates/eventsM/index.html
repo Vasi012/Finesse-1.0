@@ -3,64 +3,82 @@
 {% block content %}
 {% load static %}
 <!--Carousel Hero-->
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="3000">
-            <img src="{% static 'images/one.webp' %}" class="d-block w-100" alt="wedding picture">
+<div class="containerHero">
+    <div class="centeredHero w-auto h-auto"><img src="{% static 'images/logo.webp' %}" alt="Finesse logo"></div>
+    <div class="centerHero">Welcome to Finesse!</div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="https://data.whicdn.com/images/158608711/original.gif" class="d-block w-100"
+                    alt="Couple dancing in a neon party">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://acegif.com/wp-content/uploads/upgifsok/party-54.gif" class="d-block w-100"
+                    alt="People celebrating a concert">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="http://media.tumblr.com/8030e42004583cd0e11a7cb6823fcb6c/tumblr_inline_mkk8giOnmE1qz4rgp.gif"
+                    class="d-block w-100" alt="people dancing watching a concert">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://i.pinimg.com/originals/6a/61/1f/6a611fe770fca191ef1cb1f2972d26ff.gif"
+                    class="d-block w-100" alt="people dancing with the dj inside of a club">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://img.buzzfeed.com/buzzfeed-static/static/2021-02/2/1/asset/802e54a22ce9/anigif_sub-buzz-8313-1612228500-33.gif"
+                    class="d-block w-100" alt="bride walking to the altar">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://media1.giphy.com/media/3og0IFELH2AXdKM0es/giphy.gif" class="d-block w-100"
+                    alt="dj pit in the club">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://acegif.com/wp-content/uploads/firework-1.gif" class="d-block w-100"
+                    alt="fireworks in the sky">
+            </div>
         </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/two.webp' %}" class="d-block w-100" alt="gathering with a glass of champagne">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/three.webp' %}" class="d-block w-100" alt="cake bar with a lot of cake">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/four.webp' %}" class="d-block w-100" alt="disco ball on the sealing">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/five.webp' %}" class="d-block w-100" alt="led lights on wall of a club">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/six.webp' %}" class="d-block w-100" alt="dj pit in the club">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'images/seven.webp' %}" class="d-block w-100" alt="bacardi drink in a glass">
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
+
+
 <!--Welcome message-->
 <div class="container">
     <br>
-    <h1 class="welcome lead">Welcome to your event management platform</h1>
+    <h1 class="welcome lead"><strong>Your event management platform.</strong></h1>
     <br>
     <div class="card text-center">
         <div class="card-header fw-bolder fs-4">
             Finesse Company
         </div>
         <div class="card-body">
-            <h5 class="card-title fw-bold">About us</h5>
-            <p class="card-text">Finesse, a event management platform, build to amaze and bring all the special moments
+            <h5 class="card-title fw-bold"><em>Who we are?</em></h5>
+            <p class="card-text"><em>Finesse</em>, a event management platform, build to amaze and bring all the special
+                moments
                 to real life, from a dinner in two to a fully sold ticket festival, our management team will handle
-                everything from where will be to how will be and how you will feel after. <br> Our happy customizes
+                everything from where will be to how will be and how you will feel after. <br> Our happy customers
                 have
-                rated us to 5 stars for our professionalism and past achievements. <br> Have a future event in mind? Get
-                in
-                touch wit us and one of our representations will talk you through all the steps required. <br> You can
+                rated us to <strong>5 stars</strong> for our professionalism and past achievements. <br> Have a future
+                event in mind? <strong>Get
+                    in
+                    touch wit us</strong> and one of our representations will talk you through all the steps required.
+                <br> You can
                 create an
-                account and visualize the progress of your request live. <br> Sing up for our newsletters where you can
+                account and visualize what we are doing. <br> Sign up for our newsletters where you can
                 see
                 all the past events that have took place with our presence. </p>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Get in touch today!
+                <strong>Get in touch today!</strong>
             </button>
 
             <!-- Modal Form -->
@@ -79,26 +97,25 @@
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label" aria-label="Full-name">Full
                                         Name:
-                                    <input type="text" name="full-name" class="form-control"
-                                        id="exampleFormControlInput1" placeholder="John Smith"
-                                        required>
+                                        <input type="text" name="full-name" class="form-control"
+                                            id="exampleFormControlInput1" placeholder="John Smith" required>
                                     </label>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlEmail" class="form-label"
                                         aria-label="Email Address">Email address:
-                                    <input type="email" name="email" class="form-control" id="exampleFormControlEmail"
-                                        placeholder="name@example.com" required>
+                                        <input type="email" name="email" class="form-control"
+                                            id="exampleFormControlEmail" placeholder="name@example.com" required>
                                     </label>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlTextarea1" class="form-label"
                                         aria-label="Type here the type of event you looking for">What type of event you
                                         looking for?
-                                    <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
-                                        rows="6"
-                                        placeholder="Type what type of event are you interested in and when you can be contacted by one of our representative."
-                                        required></textarea>
+                                        <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
+                                            rows="6"
+                                            placeholder="Type what type of event are you interested in and when you can be contacted by one of our representative."
+                                            required></textarea>
                                     </label>
                                 </div>
                             </div>
@@ -120,10 +137,18 @@
 <div class="row text-center">
 
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card1.webp' %}" class="d-block w-100" alt="Cocktails">
+        <img class="myImages" id="myImg" src="{% static 'images/card1.webp' %}" class="d-block w-100"
+            alt="Extravagant Cocktails, London" style="width:100%;max-width:100%">
+        <!--Extend the picture from cards-->
+        <div id="myModaI" class="modaI">
+            <span class="cIose">&times;</span>
+            <img class="modaI-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <!---->
         <div class="card-body">
-            <h5 class="card-title fw-bold">Cocktails</h5>
-            <p class="card-text">Finesse comes with it's own bartenders. <br> Our bartenders have years of
+            <h5 class="card-title fw-bold">Extravagant Cocktails</h5>
+            <p class="card-text">Finesse comes with its own bartenders. <br> Our bartenders have years of
                 experience in handling the softest drinks, from a perfect pint of beer to a lovely cocktail. <br>
                 Our bartenders are trained and professional which will actually help you to enjoy your next party.
                 <br>Drink responsibly! <br> <em><strong>All alcohol drinks must be served by Adults.
@@ -135,7 +160,15 @@
 
     <br>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card2.webp' %}" class="d-block w-100" alt="Together">
+        <img class="myImages" id="myImg" src="{% static 'images/card2.webp' %}" class="d-block w-100 rounded"
+            alt="Holding Hands, Hyde Park" style="width:100%;max-width:100%">
+        <!--Extend the picture from cards-->
+        <div id="myModaI" class="modaI">
+            <span class="cIose">&times;</span>
+            <img class="modaI-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <!---->
         <div class="card-body">
             <h5 class="card-title fw-bold">Together</h5>
             <p class="card-text">Finesse makes sure to bring every moment to life, even a proposal for the person
@@ -151,7 +184,15 @@
 
     <br>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card3.webp' %}" class="d-block w-100" alt="Happy Moments">
+        <img class="myImages" id="myImg" src="{% static 'images/card3.webp' %}" class="d-block w-100"
+            alt="Light up the sparklers!" style="width:100%;max-width:100%">
+        <!--Extend the picture from cards-->
+        <div id="myModaI" class="modaI">
+            <span class="cIose">&times;</span>
+            <img class="modaI-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <!---->
         <div class="card-body">
             <h5 class="card-title fw-bold">Happy Moments</h5>
             <p class="card-text">Make your anniversary unique with Finesse, bring life in the small gesture. It’s
@@ -163,7 +204,15 @@
 
     <br>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card4.webp' %}" class="d-block w-100" alt="Special Wedding">
+        <img class="myImages" id="myImg" src="{% static 'images/card4.webp' %}" class="d-block w-100"
+            alt="Your wedding as a festival!" style="width:100%;max-width:100%">
+        <!--Extend the picture from cards-->
+        <div id="myModaI" class="modaI">
+            <span class="cIose">&times;</span>
+            <img class="modaI-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <!---->
         <div class="card-body">
             <h5 class="card-title fw-bold">Special Wedding</h5>
             <p class="card-text">It is hard to take care of every detail alone, it is hard even to believe that you
@@ -177,43 +226,75 @@
 
 
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card8.webp' %}" class="d-block w-100" alt="cupcakes">
+        <img class="myImages" id="myImg" src="{% static 'images/card8.webp' %}" class="d-block w-100"
+            alt="Our Majestic Cakes.. Mmmm.." style="width:100%;max-width:100%">
+        <!--Extend the picture from cards-->
+        <div id="myModaI" class="modaI">
+            <span class="cIose">&times;</span>
+            <img class="modaI-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <!---->
         <div class="card-body">
-            <h5 class="card-title fw-bold">Cupcakes Bar</h5>
-            <p class="card-text">Our chefs knows how to make each moment special, and very sweet! <br> Try our
-                cupcakes bar made by specialists for every important moment of your life. <br> <strong>Choose
-                    Finesse, choose professionalism </strong> .</p>
+            <h5 class="card-title fw-bold">Majestic Cakes</h5>
+            <p class="card-text"><em>What is so special about cake?</em>
+                It adds more happiness to the occasion, symbolizes success and milestones, 
+                and makes a perfect gift to warm the heart of the celebrant.
+                Our chefs knows how to make each moment special, and very sweet! <br> Try our
+                cupcakes, our cakes and bar made by specialists! For every important moment of your life. <br>
+                <strong>Choose
+                    Finesse, choose professionalism</strong>.</p>
         </div>
         <br>
 
         <br>
     </div>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card9.webp' %}" class="d-block w-100" alt="fireworks">
+        <img class="myImages" id="myImg" src="{% static 'images/card9.webp' %}" class="d-block w-100"
+            alt="Moments Together, Forever!" style="width:100%;max-width:100%">
+        <!--Extend the picture from cards-->
+        <div id="myModaI" class="modaI">
+            <span class="cIose">&times;</span>
+            <img class="modaI-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <!---->
         <div class="card-body">
-            <h5 class="card-title fw-bold">Fireworks</h5>
-            <p class="card-text">We know how to woke up that beast, how to bring every moment to the next level,
-                <strong>we know how to make atmosphere.</strong> <br> Live your next experience with finesse, and
-                enjoy our fireworks and lighting systems, designed for you. <br> <em>Woke the animal inside you</em>
-                !
-                <br> And bring it with you to the party! Let us handle all the tasks and you enjoy the party! </p>
+            <h5 class="card-title fw-bold">Dance in the Rain! Live the moment!</h5>
+            <p class="card-text"><em>“Life isn't about waiting for the storm to pass… It's about learning to dance in the
+                rain.”</em> <br>Don't ever stop dreaming and supporting the person next to you!<br> <strong>Learn to live the moment,</strong>
+                and invest feeling in Love! </p>
+        </div>
+    </div>
+    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
+        <img class="myImages" id="myImg" src="{% static 'images/cardseven.webp' %}" class="d-block w-100"
+            alt="Heart shape, just do it!" style="width:100%;max-width:100%">
+        <!--Extend the picture from cards-->
+        <div id="myModaI" class="modaI">
+            <span class="cIose">&times;</span>
+            <img class="modaI-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <!---->
+        <div class="card-body">
+            <h5 class="card-title fw-bold">Make a heart shape!</h5>
+            <p class="card-text">Deep love is <strong>seeing someone at their most vulnerable, often lowest point,
+                    and reaching out your hand to help them get back up.</strong> <br> Because deep love is
+                selfless. <br>It's realizing there's someone out there that you don't think twice about caring for.
+                <br> Caring for them is as involuntary as breathing. <br>Live the moment with Finesse!</p>
         </div>
     </div>
 
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card6.webp' %}" class="d-block w-100" alt="Concert">
-        <div class="card-body">
-            <h5 class="card-title fw-bold">Concert</h5>
-            <p class="card-text">A warm, calming feeling envelops your body as you and the hundreds if not thousands
-                of people surrounding you sing along with one of your favorite artists to their biggest hit. <br>
-                Make each concert to be the best of your life, organize the best concert, bring the most popular
-                artists to sing live, make all the attendees to enjoy the concert!<br> Finesse, <em> live the
-                    moment!</em></p>
+        <img class="myImages" id="myImg" src="{% static 'images/card11.webp' %}" class="d-block w-100"
+            alt="Clubbing Nights in London." style="width:100%;max-width:100%">
+        <!--Extend the picture from cards-->
+        <div id="myModaI" class="modaI">
+            <span class="cIose">&times;</span>
+            <img class="modaI-content" id="img01">
+            <div id="caption"></div>
         </div>
-    </div>
-
-    <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img src="{% static 'images/card11.webp' %}" class="d-block w-100" alt="Clubbing Nights">
+        <!---->
         <div class="card-body">
             <h5 class="card-title fw-bold">Clubbing Nights</h5>
             <p class="card-text">Strobe lights, speakers, a stage, bars with bar stools, small round tables with
@@ -224,13 +305,22 @@
         </div>
     </div>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img src="{% static 'images/cardseven.webp' %}" class="d-block w-100" alt="Couple in love">
+        <img class="myImages" id="myImg" src="{% static 'images/card6.webp' %}" class="d-block w-100" alt="Make a rave, not just a concert!"
+            style="width:100%;max-width:100%">
+        <!--Extend the picture from cards-->
+        <div id="myModaI" class="modaI">
+            <span class="cIose">&times;</span>
+            <img class="modaI-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <!---->
         <div class="card-body">
-            <h5 class="card-title fw-bold">Love</h5>
-            <p class="card-text">Deep love is <strong>seeing someone at their most vulnerable, often lowest point,
-                    and reaching out your hand to help them get back up.</strong> <br> Because deep love is
-                selfless. <br>It's realizing there's someone out there that you don't think twice about caring for.
-                <br> Caring for them is as involuntary as breathing. <br>Live the moment with Finesse!</p>
+            <h5 class="card-title fw-bold">Concert</h5>
+            <p class="card-text">A warm, calming feeling envelops your body as you and the hundreds if not thousands
+                of people surrounding you sing along with one of your favorite artists to their biggest hit. <br>
+                Make each concert to be the best of your life, organize the best concert, bring the most popular
+                artists to sing live, make all the attendees to enjoy the concert!<br> Finesse, <em> live the
+                    moment!</em></p>
         </div>
     </div>
     <br>
@@ -239,76 +329,40 @@
 
 </div>
 <!--End message-->
-<h2 class="welcome"><em>You have an event soon and you think you cannot manage?</em> We are here to
+<h6 class="endpage"><em>You have an event soon and you think you cannot manage?</em> <br>We are here to
     handel it
     for
-    you!</h2>
-
-
-{% if user.is_authenticated %}
-
-
-
-<!--Blog Column-->
-
-<div class="col-12 mt-2 left">
-    <div class="row">
-        {% for post in post_list %}
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div class="image-container">
-                        {% if "placeholder" in post.featured_image.url %}
-                        <img class="card-img-top" src="{% static 'placeholderimg.JPG' %}">
-                        {% else %}
-                        <img class="card-img-top" src="{{ post.featured_image.url }}">
-                        {% endif %}
-                        <div class="image-flash">
-                            <p class="author">Author: {{ post.author }}</p>
-                        </div>
-                    </div>
-                    <a href="#" class="post-link">
-                        <h2 class="card-title">{{ post.title }}</h2>
-                        <p class="card-text">{{ post.excerpt }}</p>
-                    </a>
-                    <hr />
-                    <p class="card-text text-muted h6">{{ post.created_on }} <i
-                            class="fat fa-heart"></i>{{ post.number_of_likes }}</p>
-                </div>
-            </div>
-        </div>
-        {% if forloop.counter|divisibleby:3 %}
-    </div>
-    <div class="row">
-        {% endif %}
-
-        {% endfor %}
-    </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-</div>
+    you!</h6>
 
 </div>
-<p class="text-center">Thank you for leaving us a review!</p>
 
+<script>
+    // create references to the modal...
+    var modal = document.getElementById('myModaI');
+    // to all images -- note I'm using a class!
+    var images = document.getElementsByClassName('myImages');
+    // the image in the modal
+    var modalImg = document.getElementById("img01");
+    // and the caption in the modal
+    var captionText = document.getElementById("caption");
 
+    // Go through all of the images with our custom class
+    for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        // and attach our click listener for this image.
+        img.onclick = function (evt) {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    }
 
+    var span = document.getElementsByClassName("cIose")[0];
 
-{% else %}
-
-<p class="text-center">Sign in to see and add a review.</p>
-
-{% endif %}
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+</script>
 
 
 {%endblock%}
