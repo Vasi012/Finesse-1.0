@@ -16,21 +16,21 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'eventsM' %}">Home</a>
+            <a class="nav-link" href="{% url 'eventsM' %}"><strong>Home</strong></a>
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'blogs' %}">Blog</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'blogs' %}"><strong>Blog</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+            <a class="nav-link" href="{% url 'account_logout' %}"><strong>Logout</strong></a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+            <a class="nav-link" href="{% url 'account_signup' %}"><strong>Register</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+            <a class="nav-link" href="{% url 'account_login' %}"><strong>Login</strong></a>
           </li>
           {% endif %}
         </ul>

@@ -355,6 +355,16 @@ label {
     background-color: #8f00d6;
 }
 
+#offcanvasRight,
+.btn-close {
+    background-color: #f5d3ff66;
+    color: white;
+}
+
+.offcanvas {
+    background-color: #f5deb39e;
+}
+
 .scrollmenu {
     background-color: #333;
     overflow: auto;

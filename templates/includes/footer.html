@@ -8,7 +8,33 @@
         flex-direction: column;
         align-items: center;
     ">
-
+            <button class="btn btn-hours mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">Working Hours</button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel" class="text-center"><br> <br> <br> Our Working Hours are:</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body text-center">
+                    <h1>Monday</h1>
+                    <p>08:00AM - 20:00PM</p>
+                    <h1>Tuesday</h1>
+                    <p>08:30AM - 19:00PM</p>
+                    <h1>Wednesday</h1>
+                    <p>09:00AM - 18:00PM</p>
+                    <h1>Thursday</h1>
+                    <p>09:00AM - 17:00PM</p>
+                    <h1>Friday</h1>
+                    <p>10:00AM - 16:00PM</p>
+                    <h1>Saturday</h1>
+                    <p>11:00AM - 15:00PM</p>
+                    <h1>Sunday</h1>
+                    <p>Closed</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 order-3 order-sm-2 col-sm-4 mb-0">
             <!-- News Letter sign up -->
 
             <button class="btn btn-hours mb-3" type="button" data-bs-toggle="offcanvas"
@@ -46,35 +72,6 @@
                     </p>
                 </div>
             </div>
-
-            <button class="btn btn-hours mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight">Working Hours</button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
-                <div class="offcanvas-header">
-                    <h5 id="offcanvasRightLabel" class="text-center"><br> <br> <br> Our Working Hours are:</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body text-center">
-                    <h1>Monday</h1>
-                    <p>08:00AM - 20:00PM</p>
-                    <h1>Tuesday</h1>
-                    <p>08:30AM - 19:00PM</p>
-                    <h1>Wednesday</h1>
-                    <p>09:00AM - 18:00PM</p>
-                    <h1>Thursday</h1>
-                    <p>09:00AM - 17:00PM</p>
-                    <h1>Friday</h1>
-                    <p>10:00AM - 16:00PM</p>
-                    <h1>Saturday</h1>
-                    <p>11:00AM - 15:00PM</p>
-                    <h1>Sunday</h1>
-                    <p>Closed</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 order-3 order-sm-2 col-sm-4 mb-0">
-            <h3 class="copyrightbtn"><strong>©Finesse Company Ltd™</strong></h3>
         </div>
         <div class="col-12 order-1 order-sm-3 col-sm-4">
             <p class="socialmedia"><em>Social Media: </em></p>
@@ -94,6 +91,9 @@
                 <i class="bi bi-twitter"></i>
             </a>
         </div>
+    </div>
+    <div class="col-12 col-sm-12 mb-0">
+        <h3 class="copyrightbtn"><strong>©Finesse Company Ltd™</strong></h3>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
