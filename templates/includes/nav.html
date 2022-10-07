@@ -27,13 +27,26 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'blogs' %}"><strong>Blog</strong></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_logout' %}"><strong>{% blocktrans %}Logout,
-                {{name}}{% endblocktrans %}</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'account_email' %}"><strong>Change
-                E-mail</strong></a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Account <i class="bi bi-person-fill"></i>
+            </a>
+            <ul class="dropdown-menu nav-acco">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><strong>Profile</strong></a>
+              </li>
+              <hr class="dropdown-divider">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'account_email' %}"><strong>Change
+                    E-mail</strong></a>
+              </li>
+              <li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}"><strong>{% blocktrans %}Logout,
+                    {{name}}{% endblocktrans %}</strong></a>
+              </li>
+            </ul>
           </li>
           {% else %}
           <li class="nav-item">
@@ -44,17 +57,6 @@
           </li>
           {% endif %}
         </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
       </div>
     </div>
   </nav>

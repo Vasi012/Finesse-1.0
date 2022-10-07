@@ -62,6 +62,9 @@ label {
     color: black;
 }
 
+.nav-acco {
+    background-color: rebeccapurple;
+}
 
 /*HOME page content*/
 
@@ -499,6 +502,6 @@ a {
     }
 
     .myImages {
-        margin-top: none;
+        margin-top: 0px;
     }
 }
