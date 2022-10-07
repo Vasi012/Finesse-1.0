@@ -242,6 +242,24 @@ label {
     max-width: 100%;
 }
 
+.button-style {
+    background-color: #590085;
+    color: white;
+    border: #590085;
+
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    color: #590085;
+    background-color: wheat;
+    border: #590085;
+}
+
+.login-a {
+    color: rgb(132, 0, 255)
+}
+
 /*Modal*/
 #myImg {
     border-radius: 5px;
@@ -333,6 +351,12 @@ label {
     font-family: 'Exo 2', sans-serif;
     font-size: 20px;
     font-weight: 600;
+}
+
+/*Reviews Section*/
+
+.stars {
+    color: #f5cc00;
 }
 
 /*footer of the page*/
