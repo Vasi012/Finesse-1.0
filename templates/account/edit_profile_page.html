@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}
+    <h1>Edit Profile Page</h1>
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    {% if user.id == profile.user.id %}
+    <h1>Edit Profile Page..</h1>
+    <br /><br />
+
+    <div class="form-group m-3 p-3">
+        <form method="POST" enctype="multipart/form-data">
+            {% if user.profile.profile_pic %}
+                <img src="{{ user.profile.profile_pic.url }}" width=250 height=250 class="img-fluid rounded mx-auto d-block shadow-lg p-2 mb-5 bg-body rounded" alt="Profile Picture">
+            {% else %}
+                <img src="{% static 'images/defaultpic.jpeg' %}" width=250 height=250 class="img-fluid rounded mx-auto d-block shadow-lg p-2 mb-5 bg-body rounded" alt="Default Picture">
+            {% endif %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <br/>
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                </div>
+              </div>
+            <button class="btn btn-secondary mt-3">Update Profile Page</button>
+        </form>
+    </div>
+
+    {% else %}
+
+    You are not the correct User to Edit this Page..
+
+    {% endif %}
+
+{% else %}
+
+    You're not allowed here! (and you know it...)
+
+{% endif %}
+
+
+{% endblock %}

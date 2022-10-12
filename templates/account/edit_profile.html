@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Edit Profile" %}{% endblock %}
+
+{% block content %}
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-8 mt-3">
+            <h3>{% trans "Account Settings" %}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mt-3">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class=" btn btn-signup right" type="submit">{% trans "Update Profile" %} &raquo;</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

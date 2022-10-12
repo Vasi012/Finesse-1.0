@@ -41,9 +41,9 @@
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="bi bi-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="bi bi-heart-fill"></i></button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="bi bi-heart"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="bi bi-heart-fill"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
@@ -78,11 +78,22 @@
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+
+                    {% if post.author.profile.profile_pic %}
+                        <img src="{{ post.author.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle"> 
+                    {% else %}
+                        <img src="{% static 'images/defaultpic.jpeg' %}" width=50 height=50 alt="Default Picture">
+                    {% endif %}
+                        
                         {{ comment.name }}
+                        <small><a href="{% url 'show_profile_page' post.author.profile.id %}"><i class="bi bi-book-fill" style="
+                            color: #8b1872;
+                        "></i></a></small> <br>
                         <span class=" text-muted font-weight-normal">
                             <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
                         </span> wrote:
+                        <hr class="m-0">
                     </p>
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}

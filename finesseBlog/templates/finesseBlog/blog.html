@@ -4,11 +4,15 @@
 
 {% load static %}
 
+
 <div class="container-fluid">
     <div class="row">
 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left" style="background-color: white;">
+            <br>
+            <h1 class="text-center">Check out our last events!</h1>
+            <br />
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4">
@@ -31,7 +35,7 @@
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="bi bi-heart"></i>
+                            <p class="card-text text-muted h6"> {{ post.created_on}} <i class="bi bi-heart-fill"></i>
                                 {{ post.number_of_likes }}</p>
                         </div>
                     </div>
@@ -43,6 +47,7 @@
                 {% endfor %}
 
             </div>
+            <p class="text-center"><small><em>Leave a comment expressing what you think.</em></small></p>
         </div>
     </div>
     {% if is_paginated %}

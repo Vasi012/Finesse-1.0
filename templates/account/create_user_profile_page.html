@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Create a new profile page..{% endblock %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+    {% if request.user == profile.user %}
+        <h1>Create Profile Page...</h1>
+        <br/><br/>
+
+         <div class="form-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-secondary">Create Profile Page</button>
+            </form>
+        </div>
+
+    {% else %}
+
+    You are not the correct User to Edit this Page..
+
+    {% endif %}
+
+{% else %}
+
+You're not allowed here! (and you know it...)
+
+{% endif %}
+
+{% endblock %}

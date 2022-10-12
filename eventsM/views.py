@@ -1,11 +1,54 @@
 import re
 from django.views.generic import TemplateView
-from django.shortcuts import render
+from django.contrib.auth.views import PasswordChangeView
+from django.shortcuts import render, get_object_or_404
 from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.conf import settings
 from django.contrib import messages
-from .models import SubscribedUsers
+from django.urls import reverse_lazy
+from django.views import generic
+from django.views.generic import DetailView, CreateView
+from .models import SubscribedUsers, Profile
+from .forms import EditProfileForm, PasswordChangingForm, ProfilePageForm
+
+
+class CreateProfilePageView(CreateView):
+    """Allow new users to create their profile page"""
+    model = Profile
+    form_class = ProfilePageForm
+    template_name = "account/create_user_profile_page.html"
+
+    def form_valid(self, form):
+        """A user fills up this form and the server grabs the user from db"""
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+
+class EditProfilePageView(generic.UpdateView):
+    """Allow users to edit their profile"""
+    model = Profile
+    template_name = 'account/edit_profile_page.html'
+    fields = ['profile_pic',
+              'bio',
+              'website_url',
+              'facebook_url',
+              'twitter_url',
+              'instagram_url']
+    success_url = reverse_lazy('eventsM')
+
+
+class ShowProfilePageView(DetailView):
+    """Show profile to other users"""
+    model = Profile
+    template_name = 'account/user_profile.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ShowProfilePageView,
+                        self).get_context_data(*args, **kwargs)
+        page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
+        context["page_user"] = page_user
+        return context
 
 
 def index(request):
@@ -20,10 +63,10 @@ def index(request):
             'email': email,
             'message': message
         }
-        message = '''
-                New message: {}
-                From: {}
-                '''.format(data['message'], data['email'])
+        message = """
+                  New message: {}
+                  From: {}
+                  """.format(data['message'], data['email'])
         print(data)
         send_mail(f'Customer Query: { data["name"] }', data['message'],
                   data["email"], ['eventswithfinesse1@gmail.com'],
@@ -100,3 +143,19 @@ def validate_email(request):
     else:
         res = JsonResponse({'msg': ''})
     return res
+
+
+class PasswordsChangeView(PasswordChangeView):
+    """A new view for changing"""
+    form_class = PasswordChangingForm
+
+
+class UserEditView(generic.UpdateView):
+    """User profile editor, where users can edit their profile"""
+    form_class = EditProfileForm
+    template_name = 'account/edit_profile.html'
+    success_url = reverse_lazy('eventsM')
+
+    def get_object(self):
+        """Fill up empty fields with user account details"""
+        return self.request.user
