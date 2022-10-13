@@ -8,21 +8,9 @@ from django.conf import settings
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.views import generic
-from django.views.generic import DetailView, CreateView
+from django.views.generic import DetailView
 from .models import SubscribedUsers, Profile
-from .forms import EditProfileForm, PasswordChangingForm, ProfilePageForm
-
-
-class CreateProfilePageView(CreateView):
-    """Allow new users to create their profile page"""
-    model = Profile
-    form_class = ProfilePageForm
-    template_name = "account/create_user_profile_page.html"
-
-    def form_valid(self, form):
-        """A user fills up this form and the server grabs the user from db"""
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+from .forms import EditProfileForm, PasswordChangingForm
 
 
 class EditProfilePageView(generic.UpdateView):

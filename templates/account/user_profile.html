@@ -6,8 +6,8 @@
 <h1>User Profile...</h1>
 <br/>
 
-{% if user.profile.profile_pic %}
-    <img src="{{ user.profile.profile_pic.url }}" width=250 height=250 class="img-fluid rounded mx-auto d-block shadow-lg p-2 mb-5 bg-body rounded" alt="Profile Picture">
+{% if page_user.profile_pic %}
+    <img src="{{ page_user.profile_pic.url }}" width=250 height=250 class="img-fluid rounded mx-auto d-block shadow-lg p-2 mb-5 bg-body rounded" alt="Profile Picture">
 {% else %}
     <img src="{% static 'images/defaultpic.jpeg' %}" width=250 height=250 class="img-fluid rounded mx-auto d-block shadow-lg p-2 mb-5 bg-body rounded" alt="Default Picture">
 {% endif %}
@@ -23,15 +23,15 @@
     </h5>
     <h6><strong><em>Check out my biography:</em></strong></h6>
     <br>
-      <p class="card-text">{{ user.profile.bio }}</p>
+      <p class="card-text">{{ page_user.bio }}</p>
       <hr>
       <br/>
 
       <p>
         <h6><strong><em>Check out my Social Media:</em></strong></h6>
         <br>
-        {% if user.profile.facebook_url is not none %}
-        >> <a href="{{ page_user.user.profile.facebook_url }}" target="_blank" rel="noopener"
+        {% if page_user.facebook_url is not none %}
+        >> <a href="{{ page_user.user.facebook_url }}" target="_blank" rel="noopener"
         aria-label="User Facebook profile" style="
         color: rebeccapurple;
         ">Check out my Facebook page: <strong><i class="bi bi-facebook"></i></strong></a>
@@ -39,8 +39,8 @@
       </p>
       <br>
       <p>
-        {% if user.profile.instagram_url is not none %}
-        >> <a href="{{ page_user.user.profile.instagram_url }}" target="_blank" rel="noopener"
+        {% if page_user.instagram_url is not none %}
+        >> <a href="{{ page_user.user.instagram_url }}" target="_blank" rel="noopener"
         aria-label="User Instagram profile" style="
         color: rebeccapurple;
         ">Check out my Instagram page: <strong><i class="bi bi-instagram"></i></strong></a>
@@ -48,8 +48,8 @@
       </p>
       <br>
       <p>
-        {% if user.profile.twitter_url is not none %}
-        >> <a href="{{ page_user.user.profile.twitter_url }}" target="_blank" rel="noopener"
+        {% if page_user.twitter_url is not none %}
+        >> <a href="{{ page_user.profile.twitter_url }}" target="_blank" rel="noopener"
         aria-label="User Twitter Profile" style="
         color: rebeccapurple;
         ">Check out my Twitter page: <strong><i class="bi bi-twitter"></i></strong></a>
@@ -57,8 +57,8 @@
       </p>
       <br>
       <p>
-        {% if user.profile.website_url is not none %}
-        >> <a href="{{ page_user.user.profile.website_url }}" target="_blank" rel="noopener"
+        {% if page_user.website_url is not none %}
+        >> <a href="{{ page_user.profile.website_url }}" target="_blank" rel="noopener"
         aria-label="User Website" style="
         color: rebeccapurple;
         ">Check out my Website: <strong><i class="bi bi-globe2"></i></strong></a>

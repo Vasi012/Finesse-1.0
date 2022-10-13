@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django.db.models.signals import post_save
 
 
 class SubscribedUsers(models.Model):
@@ -26,3 +27,25 @@ class Profile(models.Model):
     def get_absolute_url(self):
         """get absolute url for user new profile"""
         return reverse('eventsM')
+
+
+def create_user_profile_page(instance, created, **kwargs):
+    """When a new users register he will be able to edit his profile"""
+    if created:
+        Profile.objects.create(user=instance)
+
+
+post_save.connect(create_user_profile_page, sender=User)
+
+
+class Category(models.Model):
+    """We use this category to assign each user
+    an id and allow them to access their edit profiles"""
+    title = models.CharField(max_length=30)
+
+    class Meta:
+        """Category in Categories"""
+        verbose_name_plural = "categories"
+
+    def __str__(self):
+        return self.title

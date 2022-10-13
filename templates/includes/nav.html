@@ -32,22 +32,19 @@
               <strong>Account </strong><i class="bi bi-person-fill"></i>
             </a>
             <ul class="dropdown-menu nav-acco">
+              
               <li class="nav-item">
-                {% if user.profile.id %}
-                <a class="nav-link active" aria-current="page" href="{% url 'show_profile_page' user.profile.id %}"><strong>Preview Profile</strong></a>
-                {% else %}
-                
-                {% endif %}
+                <a class="nav-link active" aria-current="page"
+                  href="{% url 'show_profile_page' user.profile.id %}"><strong>Preview Profile</strong></a>
               </li>
               <li class="nav-item">
-                {% if user.profile.id %}
-                <a class="nav-link active" aria-current="page" href="{% url 'edit_profile_page' user.profile.id %}"><strong>Edit Profile</strong></a>
-                {% else %}
-                <a class="nav-link active" aria-current="page" href="{% url 'create_profile_page' %}"><strong>Create Profile</strong></a>
-                {% endif %}
+                <a class="nav-link active" aria-current="page"
+                  href="{% url 'edit_profile_page' user.profile.id %}"><strong>Edit Profile</strong></a>
               </li>
+             
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'edit_profile' %}"><strong>Account Settings</strong></a>
+                <a class="nav-link active" aria-current="page" href="{% url 'edit_profile' %}"><strong>Account
+                    Settings</strong></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{% url 'account_email' %}"><strong>Change

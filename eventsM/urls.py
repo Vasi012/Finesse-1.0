@@ -2,7 +2,6 @@ from django.urls import path, include
 from eventsM.views import HomeView
 from .views import index, UserEditView, PasswordsChangeView
 from .views import ShowProfilePageView, EditProfilePageView
-from .views import CreateProfilePageView
 from . import views
 
 
@@ -20,6 +19,4 @@ urlpatterns = [
          ShowProfilePageView.as_view(), name='show_profile_page'),
     path('<int:pk>/edit_profile_page',
          EditProfilePageView.as_view(), name='edit_profile_page'),
-    path('create_profile_page/',
-         CreateProfilePageView.as_view(), name='create_profile_page'),
 ]

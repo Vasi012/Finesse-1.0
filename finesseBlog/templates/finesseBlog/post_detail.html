@@ -79,14 +79,14 @@
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
 
-                    {% if post.author.profile.profile_pic %}
-                        <img src="{{ post.author.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle"> 
+                    {% if comment.user.profile.profile_pic %}
+                        <img src="{{ comment.user.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle"> 
                     {% else %}
                         <img src="{% static 'images/defaultpic.jpeg' %}" width=50 height=50 alt="Default Picture">
                     {% endif %}
                         
                         {{ comment.name }}
-                        <small><a href="{% url 'show_profile_page' post.author.profile.id %}"><i class="bi bi-book-fill" style="
+                        <small><a href="{% url 'show_profile_page' comment.user.profile.id %}"><i class="bi bi-book-fill" style="
                             color: #8b1872;
                         "></i></a></small> <br>
                         <span class=" text-muted font-weight-normal">
@@ -123,6 +123,9 @@
                 {% endif %}
             </div>
         </div>
+        <p>**<em><i class="bi bi-book-fill" style="
+            color: #8b1872;
+        "></i> - By clicking this you will be directed to this person profile...</em></p>
     </div>
 </div>
 

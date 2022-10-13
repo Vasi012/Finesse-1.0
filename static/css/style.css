@@ -57,9 +57,16 @@ label {
     font-size: 18px;
 }
 
-
 .nav-link:hover {
-    color: black;
+    color: green;
+}
+
+.navbar-nav:hover {
+    color: green;
+}
+
+.nav-link.active:hover {
+    color: green;
 }
 
 .nav-acco {
@@ -137,6 +144,7 @@ label {
 
     margin-top: 10px;
 }
+
 
 /*Blog page*/
 
@@ -253,8 +261,16 @@ label {
     background-color: #590085;
     color: white;
     border: #590085;
-
+    padding: 7px 21px;
+    font-size: 18px;
+    border-radius: 7px;
 }
+
+.button-style:hover {
+    background-color: wheat;
+    color: #590085;
+}
+
 
 .btn-signup:hover,
 .btn-signup:active {
@@ -289,8 +305,13 @@ label {
 }
 
 .btn-hours {
-    color: wheat;
+    color: white;
     background-color: #8f00d6;
+}
+
+.btn-hours:hover {
+    color: #8f00d6;
+    background-color: white;
 }
 
 #offcanvasRight,
