@@ -2,7 +2,18 @@
 
 {% block content %}
 {% load static %}
+
+{% if user.is_authenticated %}
+
+{% else %}
 <!--Carousel Hero-->
+<div class="site-wide-alert alert alert-warning row d-none d-sm-block">
+    <p class="text-alert">Register your account by clicking<a class="urldirection"
+            href="{% url 'account_signup' %}"><strong> <em>here</em></strong>,</a>and visit our
+        <strong>blog</strong> section!</p>
+</div>
+{% endif %}
+
 <div class="containerHero">
     <div class="centeredHero w-auto h-auto"><img src="{% static 'images/logo.webp' %}" alt="Finesse logo"></div>
     <div class="centerHero">Welcome to Finesse!</div>
@@ -142,8 +153,8 @@
 <div class="row text-center">
 
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img class="d-block w-100" src="{% static 'images/card1.webp' %}"
-            alt="Extravagant Cocktails, London" style="width:100%;max-width:100%">
+        <img class="d-block w-100" src="{% static 'images/card1.webp' %}" alt="Extravagant Cocktails, London"
+            style="width:100%;max-width:100%">
         <div class="card-body">
             <h5 class="card-title fw-bold">Extravagant Cocktails</h5>
             <p class="card-text">Finesse comes with its own bartenders. <br> Our bartenders have years of
@@ -158,8 +169,8 @@
 
     <br>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img class="d-block w-100" src="{% static 'images/card2.webp' %}"
-            alt="Holding Hands, Hyde Park" style="width:100%;max-width:100%">
+        <img class="d-block w-100" src="{% static 'images/card2.webp' %}" alt="Holding Hands, Hyde Park"
+            style="width:100%;max-width:100%">
         <div class="card-body">
             <h5 class="card-title fw-bold">Together</h5>
             <p class="card-text">Finesse makes sure to bring every moment to life, even a proposal for the person
@@ -175,8 +186,8 @@
 
     <br>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img class="d-block w-100" src="{% static 'images/card3.webp' %}"
-            alt="Light up the sparklers!" style="width:100%;max-width:100%">
+        <img class="d-block w-100" src="{% static 'images/card3.webp' %}" alt="Light up the sparklers!"
+            style="width:100%;max-width:100%">
         <div class="card-body">
             <h5 class="card-title fw-bold">Happy Moments</h5>
             <p class="card-text">Make your anniversary unique with Finesse, bring life in the small gesture. It’s
@@ -188,8 +199,8 @@
 
     <br>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img class="d-block w-100" src="{% static 'images/card4.webp' %}"
-            alt="Your wedding as a festival!" style="width:100%;max-width:100%">
+        <img class="d-block w-100" src="{% static 'images/card4.webp' %}" alt="Your wedding as a festival!"
+            style="width:100%;max-width:100%">
         <div class="card-body">
             <h5 class="card-title fw-bold">Special Wedding</h5>
             <p class="card-text">It is hard to take care of every detail alone, it is hard even to believe that you
@@ -203,8 +214,8 @@
 
 
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img class="d-block w-100" src="{% static 'images/card8.webp' %}"
-            alt="Our Majestic Cakes.. Mmmm.." style="width:100%;max-width:100%">
+        <img class="d-block w-100" src="{% static 'images/card8.webp' %}" alt="Our Majestic Cakes.. Mmmm.."
+            style="width:100%;max-width:100%">
         <div class="card-body">
             <h5 class="card-title fw-bold">Majestic Cakes</h5>
             <p class="card-text"><em>What is so special about cake?</em>
@@ -220,8 +231,8 @@
         <br>
     </div>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img class="d-block w-100" src="{% static 'images/card9.webp' %}"
-            alt="Moments Together, Forever!" style="width:100%;max-width:100%">
+        <img class="d-block w-100" src="{% static 'images/card9.webp' %}" alt="Moments Together, Forever!"
+            style="width:100%;max-width:100%">
         <div class="card-body">
             <h5 class="card-title fw-bold">Dance in the Rain! Live the moment!</h5>
             <p class="card-text"><em>“Life isn't about waiting for the storm to pass… It's about learning to dance in
@@ -232,8 +243,8 @@
         </div>
     </div>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img class="d-block w-100" src="{% static 'images/cardseven.webp' %}"
-            alt="Heart shape, just do it!" style="width:100%;max-width:100%">
+        <img class="d-block w-100" src="{% static 'images/cardseven.webp' %}" alt="Heart shape, just do it!"
+            style="width:100%;max-width:100%">
         <div class="card-body">
             <h5 class="card-title fw-bold">Make a heart shape!</h5>
             <p class="card-text">Deep love is <strong>seeing someone at their most vulnerable, often lowest point,
@@ -244,8 +255,8 @@
     </div>
 
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img class="d-block w-100" src="{% static 'images/card11.webp' %}"
-            alt="Clubbing Nights in London." style="width:100%;max-width:100%">
+        <img class="d-block w-100" src="{% static 'images/card11.webp' %}" alt="Clubbing Nights in London."
+            style="width:100%;max-width:100%">
         <div class="card-body">
             <h5 class="card-title fw-bold">Clubbing Nights</h5>
             <p class="card-text">Strobe lights, speakers, a stage, bars with bar stools, small round tables with
@@ -256,8 +267,8 @@
         </div>
     </div>
     <div class="card col-12 col-sm-12 col-md-6 col-lg-6 m-2" style="width: 35rem;">
-        <img class="d-block w-100" src="{% static 'images/card6.webp' %}"
-            alt="Make a rave, not just a concert!" style="width:100%;max-width:100%">
+        <img class="d-block w-100" src="{% static 'images/card6.webp' %}" alt="Make a rave, not just a concert!"
+            style="width:100%;max-width:100%">
         <div class="card-body">
             <h5 class="card-title fw-bold">Concert</h5>
             <p class="card-text">A warm, calming feeling envelops your body as you and the hundreds if not thousands
@@ -284,33 +295,41 @@
 <div class="contaLner text-center mt-3 mb-3">
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-12 p-3">
-                <h3><i class="bi bi-person-circle"></i> <strong>Jordan White</strong></h3>
-                <i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i>
-                <hr>
-                <p>I consider myself the first customer of Finesse.<br> Why? Because they always make me feel unique.<br>
-                    The last Rave organized by finesse was exactly what I want. <br>Finesse made my dreams come true. <br>They
-                    deserve 7 stars not just 5.<br> Thank you Finesse!
-                </p>
+            <h3><i class="bi bi-person-circle"></i> <strong>Jordan White</strong></h3>
+            <i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i
+                class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i
+                class="bi bi-star-fill stars"></i>
+            <hr>
+            <p>I consider myself the first customer of Finesse.<br> Why? Because they always make me feel unique.<br>
+                The last Rave organized by finesse was exactly what I want. <br>Finesse made my dreams come true.
+                <br>They
+                deserve 7 stars not just 5.<br> Thank you Finesse!
+            </p>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 p-3">
-                <h3><i class="bi bi-person-circle"></i> <strong>Florin Dinu</strong></h3>
-                <i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i>
-                <hr>
-                <p>Finesse has been the best company to collaborate with during a very busy time of the year.<br>
-                    Successfully Finesse managed more than 100 events for myself and I am very happy with their service,
-                    very professional and well time management skills. <br> If any of my friends are looking for a event
-                    management platform I know where to send them!
-                </p>
+            <h3><i class="bi bi-person-circle"></i> <strong>Florin Dinu</strong></h3>
+            <i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i
+                class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i
+                class="bi bi-star-fill stars"></i>
+            <hr>
+            <p>Finesse has been the best company to collaborate with during a very busy time of the year.<br>
+                Successfully Finesse managed more than 100 events for myself and I am very happy with their service,
+                very professional and well time management skills. <br> If any of my friends are looking for a event
+                management platform I know where to send them!
+            </p>
 
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 p-3">
-                <h3><i class="bi bi-person-circle"></i> <strong>Andrew Tate</strong></h3>
-                <i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i>
-                <hr>
-                <p>I choose Finesse for their professionalism. <br> The latest two car shows have been just brilliant. <br>This
-                    summer Finesse organized a rally for me! <br>I do not have words to describe how well they managed
-                    everything. <br>Finesse keep it up, we love what you doing. <br> What color is your Bugatti?
-                </p>
+            <h3><i class="bi bi-person-circle"></i> <strong>Andrew Tate</strong></h3>
+            <i class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i
+                class="bi bi-star-fill stars"></i><i class="bi bi-star-fill stars"></i><i
+                class="bi bi-star-fill stars"></i>
+            <hr>
+            <p>I choose Finesse for their professionalism. <br> The latest two car shows have been just brilliant.
+                <br>This
+                summer Finesse organized a rally for me! <br>I do not have words to describe how well they managed
+                everything. <br>Finesse keep it up, we love what you doing. <br> What color is your Bugatti?
+            </p>
         </div>
     </div>
 </div>

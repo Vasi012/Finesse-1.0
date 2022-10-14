@@ -1,7 +1,10 @@
 from django.urls import path, include
 from eventsM.views import HomeView
-from .views import index, UserEditView, PasswordsChangeView
-from .views import ShowProfilePageView, EditProfilePageView
+from .views import (index,
+                    UserEditView,
+                    PasswordsChangeView,
+                    ShowProfilePageView,
+                    EditProfilePageView)
 from . import views
 
 

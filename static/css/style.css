@@ -15,6 +15,29 @@ body {
 }
 
 /*Navigation*/
+.site-wide-alert {
+    padding: 0;
+    color: #590085;
+    background-color: #ffca0a;
+    border: #ffca0a;
+    ;
+}
+
+.text-alert {
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+}
+
+.urldirection {
+    color: black;
+}
+
+.urldirection:hover {
+    color: red;
+}
+
 
 .navbar {
     --bs-navbar-padding-y: 0;
@@ -287,6 +310,31 @@ label {
 
 .stars {
     color: #f5cc00;
+}
+
+.bi-pen-fill {
+    color: black;
+}
+
+.bi-pen-fill:hover {
+    color: green
+}
+
+.bi-trash-fill {
+    color: black;
+}
+
+.bi-trash-fill:hover {
+    color: red;
+}
+
+.bi-book-fill {
+    color:#E84610;
+}
+
+.bi-book-fill:hover {
+    color:#333;
+    padding-left: 10px;
 }
 
 /*footer of the page*/

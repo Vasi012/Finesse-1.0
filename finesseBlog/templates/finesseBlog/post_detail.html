@@ -15,9 +15,9 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="{% static 'images/drink.JPG' %}" width="100%"  alt="picture with a drink">
+                <img src="{% static 'images/drink.JPG' %}" width="100%" alt="picture with a drink">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%"  alt="picture added by user">
+                <img src=" {{ post.featured_image.url }}" width="100%" alt="picture added by user">
                 {% endif %}
             </div>
         </div>
@@ -41,16 +41,18 @@
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="bi bi-heart-fill"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                        class="bi bi-heart-fill"></i></button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="bi bi-heart-fill"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                        class="bi bi-heart-fill"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
                             <span class="text-secondary"><i class="bi bi-heart"></i></i></span>
                             {% endif %}
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <span class="text-secondary">{{ post.number_of_likes }} </span>
+                            <!-- The number of likes goes before the closing strong tag -->
+                            <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>
                     </div>
                     <div class="col-1">
@@ -75,27 +77,33 @@
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
+                <div class="comments shadow p-2 mb-2 bg-white" style="padding: 10px;border-radius: 35px;">
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-
-                    {% if comment.user.profile.profile_pic %}
-                        <img src="{{ comment.user.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle"> 
-                    {% else %}
+                        {% if comment.user.profile.profile_pic %}
+                        <img src="{{ comment.user.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle">
+                        {% else %}
                         <img src="{% static 'images/defaultpic.jpeg' %}" width=50 height=50 alt="Default Picture">
-                    {% endif %}
-                        
+                        {% endif %}
                         {{ comment.name }}
-                        <small><a href="{% url 'show_profile_page' comment.user.profile.id %}"><i class="bi bi-book-fill" style="
-                            color: #8b1872;
-                        "></i></a></small> <br>
+                        (<a href="{% url 'show_profile_page' comment.user.profile.id %}"><i
+                                    class="bi bi-book-fill" style="
+                                    padding-left: 10px;
+                                "></i></a> |
                         <span class=" text-muted font-weight-normal">
+                            <a href="#"
+                                aria-label="To edit your comment press here"><i class="bi bi-pen-fill" style="
+                                padding-left: 10px;
+                            "></i></a> |
+                            <a href="#"
+                                aria-label="To delete your comment press here"><i class="bi bi-trash-fill" style="
+                                padding-left: 10px;
+                            "></i></a>)
                             <!-- The comment's created date goes here -->
-                            {{ comment.created_on }}
-                        </span> wrote:
-                        <hr class="m-0">
+                            {{ comment.created_on }}</span> wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
+                    <!-- The body of the comment -->
+
                     {{ comment.body | linebreaks }}
                 </div>
                 <!-- Our for loop ends here -->
@@ -103,7 +111,7 @@
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
-            <div class="card-body">
+            <div class="card-body" style="margin-left: 1px;margin-top: 1px;">
                 <!-- For later -->
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
@@ -124,7 +132,7 @@
             </div>
         </div>
         <p>**<em><i class="bi bi-book-fill" style="
-            color: #8b1872;
+            color: #E84610;
         "></i> - By clicking this you will be directed to this person profile...</em></p>
     </div>
 </div>

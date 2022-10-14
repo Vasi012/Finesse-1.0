@@ -19,9 +19,9 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
-    """Alow users to see post details"""
+    """Settings for displaying individual BlogPosts"""
     def get(self, request, slug, *args, **kwargs):
-        """We using get for blog posts"""
+        """Get information on Blogpost from backend"""
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
@@ -42,7 +42,7 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
-        """This function post or offer an error"""
+        """Send information back to backend"""
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
@@ -75,7 +75,7 @@ class PostDetail(View):
 
 
 class PostLike(View):
-    """This class counts and posts the likes"""
+    """Remove or add like and redirect to post_detail.html"""
     def post(self, request, slug, *args, **kwargs):
         """With this function user can like or remove its like"""
         post = get_object_or_404(Post, slug=slug)
