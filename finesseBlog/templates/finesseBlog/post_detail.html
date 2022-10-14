@@ -66,6 +66,10 @@
             </div>
         </div>
     </div>
+    <div class="text-center">
+        <small><a href="{% url 'update_post' post.pk %}" class="editpost">Edit Post <i class="bi bi-pencil-square"></i></a></small>
+        <small><a href="{% url 'delete_post' post.pk %}" class="deletepost">Delete Post <i class="bi bi-trash"></i></a></small>
+    </div>
     <div class="row">
         <div class="col">
             <hr>
@@ -86,17 +90,16 @@
                         <img src="{% static 'images/defaultpic.jpeg' %}" width=50 height=50 alt="Default Picture">
                         {% endif %}
                         {{ comment.name }}
-                        (<a href="{% url 'show_profile_page' comment.user.profile.id %}"><i
-                                    class="bi bi-book-fill" style="
+                        (<a href="{% url 'show_profile_page' comment.user.profile.id %}"><i class="bi bi-book-fill"
+                                style="
                                     padding-left: 10px;
                                 "></i></a> |
                         <span class=" text-muted font-weight-normal">
-                            <a href="#"
-                                aria-label="To edit your comment press here"><i class="bi bi-pen-fill" style="
+                            <a href="#" aria-label="To edit your comment press here"><i class="bi bi-pen-fill" style="
                                 padding-left: 10px;
                             "></i></a> |
-                            <a href="#"
-                                aria-label="To delete your comment press here"><i class="bi bi-trash-fill" style="
+                            <a href="#" aria-label="To delete your comment press here"><i class="bi bi-trash-fill"
+                                    style="
                                 padding-left: 10px;
                             "></i></a>)
                             <!-- The comment's created date goes here -->

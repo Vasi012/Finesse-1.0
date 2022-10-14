@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
@@ -14,6 +15,7 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     featured_image = CloudinaryField('image', default='placeholder')
+    createdBy = models.ForeignKey(User, on_delete=models.CASCADE)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
@@ -34,13 +36,20 @@ class Post(models.Model):
         """Count number of likes"""
         return self.likes.count()
 
+    def get_absolute_url(self):
+        """Return user to the blogs page after posting / update"""
+        return reverse('blogs')
+
 
 class Comment(models.Model):
     """Add comments and a max_length"""
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
     name = models.CharField(max_length=80)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, related_name="comments")
+    user = models.ForeignKey(User, on_delete=models.CASCADE,
+                             null=True,
+                             blank=True,
+                             related_name="comments")
     email = models.EmailField()
     body = models.TextField(max_length=420)
     created_on = models.DateTimeField(auto_now_add=True)

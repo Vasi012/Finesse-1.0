@@ -4,68 +4,77 @@
 
 {% load static %}
 
+{% if user.is_authenticated %}
+    <div class="container-fluid">
+        <div class="row">
 
-<div class="container-fluid">
-    <div class="row">
-
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left" style="background-color: white;">
-            <br>
-            <h1 class="text-center">Check out our last events!</h1>
-            <br />
-            <div class="row">
-                {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/holdr.JPG' %}"
-                                    alt="This is a placeholder image">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                    alt="Picture added by admin of website">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Admin: {{ post.author }}</p>
+            <!-- Blog Entries Column -->
+            <div class="col-12 mt-3 left" style="background-color: white;">
+                <div class="d-flex justify-content-end me-3">
+                    <a class="addpostbtn" href="{% url 'add_post' %}">Add a post >></a>
+                </div>
+                <br>
+                <h1 class="text-center">Check out our last events!</h1>
+                <br />
+                <div class="row">
+                    {% for post in post_list %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="image-container">
+                                    {% if "placeholder" in post.featured_image.url %}
+                                    <img class="card-img-top" src="{% static 'images/holdr.JPG' %}"
+                                        alt="This is a placeholder image">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                                        alt="Picture added by admin of website">
+                                    {% endif %}
+                                    <div class="image-flash">
+                                        <p class="author"> >> {{ post.author }}</p>
+                                    </div>
                                 </div>
+                                <a href="{% url 'post_detail' post.slug  %}" class="post-link">
+                                    <h2 class="card-title">{{ post.title }}</h2>
+                                    <p class="card-text">{{ post.excerpt }}</p>
+                                </a>
+                                <br>
+                                <div class="text-center">
+                                    <small><a href="{% url 'update_post' post.pk %}" class="editpost">Edit Post <i class="bi bi-pencil-square"></i></a></small>
+                                    <small><a href="{% url 'delete_post' post.pk %}" class="deletepost">Delete Post <i class="bi bi-trash"></i></a></small>
+                                </div>
+                                <hr />
+                                <p class="card-text text-muted h6"> {{ post.created_on}} <i class="bi bi-heart-fill"></i>
+                                    {{ post.number_of_likes }}</p>
                             </div>
-                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr />
-                            <p class="card-text text-muted h6"> {{ post.created_on}} <i class="bi bi-heart-fill"></i>
-                                {{ post.number_of_likes }}</p>
                         </div>
                     </div>
+                    {% if forloop.counter|divisibleby:3 %}
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
 
+                </div>
+                <p class="text-center"><small><em>Leave a comment expressing what you think.</em></small></p>
             </div>
-            <p class="text-center"><small><em>Leave a comment expressing what you think.</em></small></p>
         </div>
-    </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation" style="
-    background-color: white;
-">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"
-                    style="color: #000000; background-color: white;">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"
-                    style="color: #000000; background-color: white;"> NEXT &raquo;</a></li>
+        {% if is_paginated %}
+        <nav aria-label="Page navigation" style="
+        background-color: white;
+    ">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"
+                        style="color: #000000; background-color: white;">&laquo; PREV </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"
+                        style="color: #000000; background-color: white;"> NEXT &raquo;</a></li>
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-</div>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+{% endif %}
 {%endblock%}

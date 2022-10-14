@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Delete blog post{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<h1 class="m-5">Delete Post..</h1>
+<br>
+<div class="form-group m-5">
+    <h3>Do you want to delete:" {{ post.title }} "?</h3>
+    <br/>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <strong>Are you sure?! Once you press the Delete Post! button you cannot undo it!</strong><br/><br/>
+        <button class="btn btn-signup btn-lg">Delete Post!</button>
+    </form>
+</div>
+
+{% endblock %}

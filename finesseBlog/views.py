@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
+from django.urls import reverse_lazy
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, PostForm, UpdatePostForm
 
 
 def index(request):
@@ -85,3 +87,42 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class AddPostView(LoginRequiredMixin, generic.CreateView):
+    """Allow users to post"""
+    model = Post
+    form_class = PostForm
+    template_name = 'add_post.html'
+
+
+class UpdatePostView(UserPassesTestMixin, generic.UpdateView):
+    """Allow user to update their posts"""
+    model = Post
+    template_name = 'update_post.html'
+    form_class = UpdatePostForm
+
+    def test_func(self):
+        logged_in_user = self.request.user
+        current_ticket = self.get_object()
+
+        if current_ticket.author == logged_in_user:
+            return True
+        else:
+            return False
+
+
+class DeletePostView(UserPassesTestMixin, generic.DeleteView):
+    """Allow user to delete post"""
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy('blogs')
+
+    def test_func(self):
+        logged_in_user = self.request.user
+        current_ticket = self.get_object()
+
+        if current_ticket.author == logged_in_user:
+            return True
+        else:
+            return False

@@ -337,6 +337,35 @@ label {
     padding-left: 10px;
 }
 
+.editpost {
+    color: black;
+}
+
+.editpost:hover {
+    color: green;
+}
+
+.deletepost {
+    color: black;
+}
+
+.deletepost:hover {
+    color: red;
+}
+
+.addpostbtn {
+    background-color: #914e92;
+    padding: 7px;
+    margin-top: 8px;
+    border-radius: 12px;
+    color: white;
+}
+
+.addpostbtn:hover {
+    background-color: #590085;
+    color: white;
+}
+
 /*footer of the page*/
 .footer {
     background-color: #590085;
