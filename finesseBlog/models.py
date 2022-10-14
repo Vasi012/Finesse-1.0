@@ -15,7 +15,6 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     featured_image = CloudinaryField('image', default='placeholder')
-    createdBy = models.ForeignKey(User, on_delete=models.CASCADE)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
@@ -39,6 +38,7 @@ class Post(models.Model):
     def get_absolute_url(self):
         """Return user to the blogs page after posting / update"""
         return reverse('blogs')
+
 
 
 class Comment(models.Model):

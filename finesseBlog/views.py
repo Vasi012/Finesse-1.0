@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.urls import reverse_lazy
+from django.utils.text import slugify
 from .models import Post
 from .forms import CommentForm, PostForm, UpdatePostForm
 
@@ -94,6 +95,11 @@ class AddPostView(LoginRequiredMixin, generic.CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        form.instance.slug = slugify(form.cleaned_data['title'])
+        return super(AddPostView, self).form_valid(form)
 
 
 class UpdatePostView(UserPassesTestMixin, generic.UpdateView):

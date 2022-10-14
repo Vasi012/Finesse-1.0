@@ -16,7 +16,6 @@ class PostForm(forms.ModelForm):
         """Allow user to have access just to certain fields"""
         model = Post
         fields = ('title',
-                  'author',
                   'featured_image',
                   'content')
 
@@ -25,7 +24,6 @@ class PostForm(forms.ModelForm):
                                             'form-control',
                                             'placeholder':
                                             'This is the blog title'}),
-            'author': forms.TextInput(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control',
                                              'placeholder':
                                              'This is the message space,'
