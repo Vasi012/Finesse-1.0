@@ -21,9 +21,11 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
+            <!--Home page-->
             <a class="nav-link" href="{% url 'eventsM' %}"><strong>Home</strong></a>
           </li>
           {% if user.is_authenticated %}
+          <!--If the user is authenticated he can see the Blog and Account links-->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'blogs' %}"><strong>Blog</strong></a>
           </li>
@@ -32,7 +34,7 @@
               <strong>Account </strong><i class="bi bi-person-fill"></i>
             </a>
             <ul class="dropdown-menu nav-acco">
-              
+              <!--Dropdown menu inside Account contains Preview and edit Profile, Account Settings and change email address-->
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page"
                   href="{% url 'show_profile_page' user.profile.id %}"><strong>Preview Profile</strong></a>
@@ -52,12 +54,15 @@
               </li>
               <li>
               </li>
+              <!--User can logout from his account-->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}"><strong>{% blocktrans %}Logout,
                     {{name}}{% endblocktrans %}</strong></a>
               </li>
             </ul>
           </li>
+          <!--If the user is not authenticated they won't see the above-->
+          <!--If user is not authenticated they will see register an account or login in to an account.-->
           {% else %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_signup' %}"><strong>Register</strong></a>
@@ -71,7 +76,7 @@
     </div>
   </nav>
 </header>
-
+<!--A toast message has been implemented to announce user when a significant action takes place-->
 <script>
   $("dropdown").on("click", function () {
     $('.dropdown-content').slideToggle();

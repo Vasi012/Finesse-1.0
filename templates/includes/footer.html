@@ -1,7 +1,7 @@
 {% load static %}
 <!--3 containers-->
 <footer class="mt-auto py-3 footer justify-content-center">
-
+<!--1st: The first container will have a offcanvas imported from bootstrap with the working hours-->
     <div class="row text-center mt-3 mb-3">
         <div class="col-12 order-2 order-sm-1 col-sm-4" style="
         display: flex;
@@ -16,6 +16,7 @@
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
+                <!--Finesse Working Hours-->
                 <div class="offcanvas-body text-center">
                     <h1>Monday</h1>
                     <p>08:00AM - 20:00PM</p>
@@ -36,7 +37,7 @@
         </div>
         <div class="col-12 order-3 order-sm-2 col-sm-4 mb-0">
             <!-- News Letter sign up -->
-
+            <!--Just authenticated user can sign up for the news letter-->
             <button class="btn btn-hours mb-3" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Subscribe to our
                 Newsletter</button>
@@ -73,6 +74,7 @@
                 </div>
             </div>
         </div>
+        <!--Finesse social media links-->
         <div class="col-12 order-1 order-sm-3 col-sm-4">
             <p class="socialmedia"><em>Social Media: </em></p>
             <!--Facebook link opening in a new tab -->
@@ -92,9 +94,11 @@
             </a>
         </div>
     </div>
+    <!--Copyright-->
     <div class="col-12 col-sm-12 mb-0">
         <h3 class="copyrightbtn"><strong>©Finesse Company Ltd™</strong></h3>
     </div>
+    <!--Imported Ajax and script.js for the news letter-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
 

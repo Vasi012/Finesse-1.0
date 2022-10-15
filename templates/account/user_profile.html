@@ -2,16 +2,16 @@
 {% load static %}
 
 {% block content %}
-
+<!--User can see preview it's profile-->
 <h1>User Profile...</h1>
 <br/>
-
+<!--After editing the profile the user can see it's profile picture / default-->
 {% if page_user.profile_pic %}
     <img src="{{ page_user.profile_pic.url }}" width=250 height=250 class="img-fluid rounded mx-auto d-block shadow-lg p-2 mb-5 bg-body rounded" alt="Profile Picture">
 {% else %}
     <img src="{% static 'images/defaultpic.jpeg' %}" width=250 height=250 class="img-fluid rounded mx-auto d-block shadow-lg p-2 mb-5 bg-body rounded" alt="Default Picture">
 {% endif %}
-
+<!--User Name field-->
 <div class="card mb-3 ms-3 me-3">
     <div class="card-body">
       <h5 class="card-title text-center"> Hello, my name is: 
@@ -21,12 +21,13 @@
         </strong>
         <br>
     </h5>
+    <!--User Biography-->
     <h6><strong><em>Check out my biography:</em></strong></h6>
     <br>
       <p class="card-text">{{ page_user.bio }}</p>
       <hr>
       <br/>
-
+      <!--User social media links-->
       <p>
         <h6><strong><em>Check out my Social Media:</em></strong></h6>
         <br>

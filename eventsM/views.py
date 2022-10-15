@@ -40,7 +40,7 @@ class ShowProfilePageView(DetailView):
 
 
 def index(request):
-    """Get in touch with us gmail settings"""
+    """User can Get in touch with us - gmail settings"""
     if request.method == 'POST':
         name = request.POST.get('full-name')
         email = request.POST.get('email')
@@ -119,7 +119,7 @@ def newslett(request):
 
 
 def validate_email(request):
-    """Newsletter validate email, where we accept just once the email"""
+    """Newsletter validate email where we accept just once the email address"""
     email = request.POST.get("email", None)
     if email is None:
         res = JsonResponse({'msg': 'Email is required.'})
@@ -134,7 +134,7 @@ def validate_email(request):
 
 
 class PasswordsChangeView(PasswordChangeView):
-    """A new view for changing"""
+    """A new view for changing password"""
     form_class = PasswordChangingForm
 
 

@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
-
+<!--In case user navigates to broken links they will be informed by the 404 error-->
 {% block content %}
 <div class="d-flex flex-column align-items-center">
     <h1>404 Page Not Found</h1>
     <p>The page you have requested cannot be found!</p>
-
+<!--A home button has been provided to not require user to use the back arrow-->
     <a href="{% url 'eventsM' %}" class="btn button-style">Home</a>
 </div>
 {% endblock %}

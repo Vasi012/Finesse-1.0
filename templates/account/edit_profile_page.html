@@ -11,7 +11,7 @@
     {% if user.id == profile.user.id %}
     <h1>Edit Profile Page..</h1>
     <br /><br />
-
+<!--This page has been made to allow user to edit their profile page just if they are authenticated into their account-->
     <div class="form-group m-3 p-3">
         <form method="POST" enctype="multipart/form-data">
             {% if user.profile.profile_pic %}
@@ -29,7 +29,7 @@
             <button class="btn btn-secondary mt-3">Update Profile Page</button>
         </form>
     </div>
-
+    <!--If the user dos not match the username id he will be redirected-->
     {% else %}
 
     You are not the correct User to Edit this Page..

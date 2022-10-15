@@ -40,7 +40,6 @@ class Post(models.Model):
         return reverse('blogs')
 
 
-
 class Comment(models.Model):
     """Add comments and a max_length"""
     post = models.ForeignKey(Post, on_delete=models.CASCADE,

@@ -1,3 +1,5 @@
+//This const are created to allow users to subscribe to the news letter
+
 const validateEmail = function(email) {
     var formData = new FormData();
     formData.append('email', email);

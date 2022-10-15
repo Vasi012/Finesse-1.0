@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
-
+<!--If the user encounter a Internal Error we will inform that it's not his faults it is ours-->
 {% block content %}
 <div class="d-flex flex-column align-items-center">
     <h1>500 Internal Server Error</h1>
     <p>Don't worry, this is us not you!</p>
-
+<!--A home button has been provided to not require user to use the back arrow-->
     <a href="{% url 'eventsM' %}" class="btn button-style">Home</a>
 </div>
 {% endblock %}

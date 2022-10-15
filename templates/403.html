@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
-
+<!--A 403 page has been implemented to stop users to do not authorized actions.-->
 {% block content %}
 <div class="d-flex flex-column align-items-center">
     <h1>403 Forbidden</h1>
-    <p>You are not authorised to perform this action!</p>
-
+    <p>You are not authorized to perform this action!</p>
+<!--A home button has been provided to not require user to use the back arrow-->
     <a href="{% url 'eventsM' %}" class="btn button-style">Home</a>
 </div>
 {% endblock %}

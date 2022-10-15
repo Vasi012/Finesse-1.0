@@ -22,12 +22,13 @@
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="image-container">
+                                    <!--We will implement a holder for post without an image-->
                                     {% if "placeholder" in post.featured_image.url %}
                                     <img class="card-img-top" src="{% static 'images/holdr.JPG' %}"
                                         alt="This is a placeholder image">
                                     {% else %}
                                     <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                        alt="Picture added by admin of website">
+                                        alt="Picture added via post">
                                     {% endif %}
                                     <div class="image-flash">
                                         <p class="author"> >> {{ post.author }}</p>
@@ -38,6 +39,7 @@
                                     <p class="card-text">{{ post.excerpt }}</p>
                                 </a>
                                 <br>
+                                <!--We have added an edit and update post-->
                                 <div class="text-center">
                                     <small><a href="{% url 'update_post' post.pk %}" class="editpost">Edit Post <i class="bi bi-pencil-square"></i></a></small>
                                     <small><a href="{% url 'delete_post' post.pk %}" class="deletepost">Delete Post <i class="bi bi-trash"></i></a></small>
@@ -53,11 +55,11 @@
                 <div class="row">
                     {% endif %}
                     {% endfor %}
-
                 </div>
                 <p class="text-center"><small><em>Leave a comment expressing what you think.</em></small></p>
             </div>
         </div>
+        <!--If there are more than 6 posts on a page, django will create another-->
         {% if is_paginated %}
         <nav aria-label="Page navigation" style="
         background-color: white;

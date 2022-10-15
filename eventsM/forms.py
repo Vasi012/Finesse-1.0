@@ -5,7 +5,7 @@ from .models import Profile
 
 
 class EditProfileForm(UserChangeForm):
-    """Make difference from user to staff members"""
+    """Edit profile form"""
     email = forms.EmailField(widget=forms.EmailInput
                              (attrs={'class': 'form-control'}))
     first_name = forms.CharField(max_length=100, widget=forms.TextInput
@@ -25,7 +25,7 @@ class EditProfileForm(UserChangeForm):
 
 
 class PasswordChangingForm(PasswordChangeForm):
-    """The new form for change password"""
+    """Form for change password"""
     old_password = forms.CharField(max_length=100,
                                    widget=forms.PasswordInput
                                    (attrs={'class': 'form-control',
@@ -48,6 +48,7 @@ class PasswordChangingForm(PasswordChangeForm):
 class ProfilePageForm(forms.ModelForm):
     """Allow new user to edit specific fields"""
     class Meta:
+        """Elements of form"""
         model = Profile
         fields = ('bio',
                   'profile_pic',

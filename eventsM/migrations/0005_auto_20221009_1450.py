@@ -4,7 +4,7 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
+    """Migrations to the DB"""
     dependencies = [
         ('eventsM', '0004_profile'),
     ]
@@ -23,7 +23,9 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='profile',
             name='profile_pic',
-            field=models.ImageField(blank=True, null=True, upload_to='images/profile_pic'),
+            field=models.ImageField(blank=True,
+                                    null=True,
+                                    upload_to='images/profile_pic'),
         ),
         migrations.AddField(
             model_name='profile',
