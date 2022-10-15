@@ -320,7 +320,8 @@ Delete Post.
 
 Results:
 
-![image7](https://user-images.githubusercontent.com/96884287/195995064-81c2893e-3104-4e84-924d-c9952fc14afd.jpeg)
+![rgf](https://user-images.githubusercontent.com/96884287/195995578-e317a9e2-f33b-4a70-8b52-b8049dd0dc96.png)
+
 
 
 Account Setting
@@ -333,10 +334,9 @@ We have a contrast error as I'm unable to change the link color of the picture u
 
 Change Email
 
-
 Results:
 
-![image7](https://user-images.githubusercontent.com/96884287/195995168-0a25bd22-3474-4d76-a0eb-42713017fbbc.jpeg)
+![sadsf](https://user-images.githubusercontent.com/96884287/195995605-03e5dc65-8d5e-4002-ad6c-93fb6361a11c.png)
 
 
 
