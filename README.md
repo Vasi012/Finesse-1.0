@@ -1,16 +1,3 @@
-![Wirframe - 1](https://user-images.githubusercontent.com/96884287/190642118-ce305db6-49e0-4254-8eba-e5c0bea9a513.png)
-![Wirframe - 2](https://user-images.githubusercontent.com/96884287/190642122-761f8500-fbc0-40b7-a59c-75ae539ecdaa.png)
-![Wirframe - 3](https://user-images.githubusercontent.com/96884287/190642124-c6a9697b-57fd-44e0-aa22-c2abdfc177fe.png)
-![Wirframe - 4](https://user-images.githubusercontent.com/96884287/190642127-7aea6881-8173-4953-8ca1-8cd15f271c42.png)
-![Wirframe - 5](https://user-images.githubusercontent.com/96884287/190642129-a9c9dda4-4fce-4d2a-8ebc-c88fc1198df8.png)
-![Wirframe - 6](https://user-images.githubusercontent.com/96884287/190642141-582cfba4-273a-4fe0-ba87-a15227bb3580.png)
-![Wirframe - 7](https://user-images.githubusercontent.com/96884287/190642142-b32158cd-2bdf-4bb5-970a-f71ab87d31de.png)
-![Wirframe - 8](https://user-images.githubusercontent.com/96884287/190642146-de11f7ee-aa84-497a-a1f6-846975127180.png)
-![Wirframe - 9](https://user-images.githubusercontent.com/96884287/190642147-c511b344-c077-4641-a911-90dba301472b.png)
-![Wirframe - 10](https://user-images.githubusercontent.com/96884287/190642148-5afb0f78-1a6e-4a10-9b1b-57a6d09b3044.png)
-![Wirframe - 11](https://user-images.githubusercontent.com/96884287/190642152-58bf5547-d9ae-44a6-b929-0069d949af3c.png)
-![Wirframe - 12](https://user-images.githubusercontent.com/96884287/190642154-3422e187-27f2-4044-9c5f-c0adaf69b7cc.png)
-![Wirframe - 13](https://user-images.githubusercontent.com/96884287/190642156-bec2f6b7-9ec5-40f5-9863-b781bb39f0e7.png)
 # Finesse
 
 Finesse is a fictional event management platform. This company doesn’t have a fix location as it is mainly an online business.
@@ -25,13 +12,13 @@ On the Second page, users can interact with eachother via posts and comments. Th
 
 <<<Mock Up>>>
 
-### User-Experience-Design
+## User-Experience-Design
 
-######The-Strategy-Plane
+###The-Strategy-Plane
 
 
 
-###### Site-Goals
+#### Site-Goals
 
 The website aims to help users find the organisers for their next event.
 The website is relatively simple to use, and users can get from a part to another very easily without too much hassle. 
@@ -47,7 +34,7 @@ All projects were assigned to ToDo, prioritized under the labels, must have, sho
 
 The Kanban board was created using github projects and can be located [here](https://github.com/users/Vasi012/projects/2) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
 
-##### Kanban image
+### Kanban image
 
 Epics
 The project had 7 main Epics (milestones):
@@ -139,15 +126,16 @@ Complete readme documentation.
 Complete testing documentation write up.
 
 
-### The-Scope-Plane
+## The-Scope-Plane
 
 Responsive Design - Site should be fully functional on all devices from 280px (as per last phone from Samsung Galaxy Fold).
 Restricted role-based features
 Home page with about us information, newsletters & blog page.
 
-### The-Structure-Plane
+## The-Structure-Plane
 
 Features
+
 USER STORY - As a developer, I need to create the navbar so that users can navigate the website from any device
 
 Implementation:
@@ -158,21 +146,23 @@ The Navigation contains links for Home, allauth options and once signed up blog 
 
 The following navigation items are available on all pages:
 
-Home -> index.html - Visible to all
-Blog -> blog.html – Visible to all logged in users
-Login -> login.html - Visible to all
-Register -> signup.html - Visible to all
-Logout -> logout.html - Visible to logged in users
-Add post -> add_post.html - Visible to logged in users
-Update post -> update_post.html - Visible to logged in users
-Delete Post -> delete_post.html - Visible to logged in users
-Edit Profile -> edit_profile_page.html - Visible to logged in users
-Account Settings -> edit_profile.html - Visible to logged in users
-Preview Profile. -> user_profile.html - Visible to all
+1. Home -> index.html - Visible to all
+2. Blog -> blog.html – Visible to all logged in users
+3. Login -> login.html - Visible to all
+4. Register -> signup.html - Visible to all
+5. Logout -> logout.html - Visible to logged in users
+6. Add post -> add_post.html - Visible to logged in users
+7. Update post -> update_post.html - Visible to logged in users
+8. Delete Post -> delete_post.html - Visible to logged in users
+9. Edit Profile -> edit_profile_page.html - Visible to logged in users
+10. Account Settings -> edit_profile.html - Visible to logged in users
+11. Preview Profile. -> user_profile.html - Visible to all
 
 The navigation menu is displayed on all pages and drops down into a hamburger menu on smaller devices. This will allow users to view the site from any device and not take up too much space on mobile devices.
 
-Navbar>>>>>>
+<img width="1416" alt="Screenshot 2022-10-15 at 21 12 49" src="https://user-images.githubusercontent.com/96884287/196006068-60f040be-405e-466e-b6e6-cdff1fa921ad.png">
+
+
 
 USER STORY - As Finesse owner, I would like a home page so that customers can view information about my event management platform.
 
@@ -193,7 +183,8 @@ USER STORY - As a developer, I need to create the footer with social media links
 
 Implementation:
 
-Footer>>>>>>
+<img width="1419" alt="Screenshot 2022-10-15 at 21 12 57" src="https://user-images.githubusercontent.com/96884287/196006074-5c85361d-d2a6-475d-8934-f1cc24e51037.png">
+
 
 A footer has been added to the bottom of the site, this contains a Twitter, Instagram and Facebook link so that users can follow Finesse on social media if they want to keep up to date with special offers not advertised on the website / newsletter. These icons have aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site. The links have been carefully customised to direct users to the personal pages created especially for this project. 
 
@@ -218,9 +209,10 @@ Custom toasts were added on successful creation of an account, deleting an accou
 
 This provides an image in the tabs header to allow the user to easily identify the website if they have multiple tabs open.
 
-Favicon>>>>>>
+<img width="37" alt="Screenshot 2022-10-15 at 21 14 48" src="https://user-images.githubusercontent.com/96884287/196006088-e91ce641-d50a-40fa-ac05-cea4a7b981fe.png">
 
-#### Error Pages
+
+### Error Pages
 
 USER STORY - As a developer, I need to implement a 404-error page to alert users when they have accessed a page that doesn't exist
 
@@ -262,52 +254,85 @@ As a developer, I need to set up the project so that it is ready for implementin
 
 
 Features Left to Implement
+
 In a future release I would like to implement messageing system that allow users to communicate with website owners without nedding of a 3rd party such as email. On the home page I would like to implement a rating system so users can see reviews left by others and trust the website. 
 
 ### The-Skeleton-Plane
 
 Wireframes
 Home page
-Home Page>>>>>>
+
+![Screenshot 2022-10-03 154137](https://user-images.githubusercontent.com/96884287/196006246-dfd5d84a-9aa8-439d-8340-be87fcd637d7.png)
+
 
 Signup page
-Sign up Page>>>>>>
+
+![Screenshot 2022-10-03 155158](https://user-images.githubusercontent.com/96884287/196006117-71cbf3af-1387-4f16-b342-5348e9825db6.png)
+
 
 Log in
-Login Page>>>>>>
+
+![Screenshot 2022-10-03 155224](https://user-images.githubusercontent.com/96884287/196006123-a92dfded-2f05-4334-b5cb-7cb48d8c16bf.png)
+
 
 Log Out
-Logout Page>>>>>>
+
+![Screenshot 2022-10-03 155257](https://user-images.githubusercontent.com/96884287/196006134-64fd1278-e155-412e-98bd-a1b8f789e3b7.png)
+
 
 Blog
-Blog page>>>>>>
+
+![Screenshot 2022-10-03 155444](https://user-images.githubusercontent.com/96884287/196006139-57c67899-e002-4c05-98c7-3c8e10f1ad29.png)
+
 
 404 Error
-404 Error>>>>>>
+
+<img width="993" alt="Screenshot 2022-10-15 at 21 29 05" src="https://user-images.githubusercontent.com/96884287/196006733-5e92aef7-6e4f-4bb4-a08e-42ebece2b099.png">
+
 
 403 Error
-403 Error>>>>>>
+
+<img width="999" alt="Screenshot 2022-10-15 at 21 29 17" src="https://user-images.githubusercontent.com/96884287/196006740-49a0622c-ea58-4343-9743-18ccfaa66fb8.png">
+
 
 500 Error
-500 Error>>>>>>
+
+<img width="991" alt="Screenshot 2022-10-15 at 21 29 31" src="https://user-images.githubusercontent.com/96884287/196006716-addda97d-bc36-442f-b4e9-5d014f027a4c.png">
+
 
 Edit Profile
+
 >>>>>>
 
 Account Settings
->>>>>>
+
+<img width="1024" alt="Screenshot 2022-10-15 at 21 33 14" src="https://user-images.githubusercontent.com/96884287/196006754-1dcfabeb-dcbe-43e2-8a05-fb3d63796ba0.png">
+
 
 Preview Profile
->>>>>>
+
+<img width="994" alt="Screenshot 2022-10-15 at 21 37 46" src="https://user-images.githubusercontent.com/96884287/196006778-47b4080f-fb91-4ae0-bd87-61d5bc17e04a.png">
+
 
 Add Post
->>>>>>
+
+<img width="1007" alt="Screenshot 2022-10-15 at 21 34 36" src="https://user-images.githubusercontent.com/96884287/196006763-f92d2f77-7ee3-449b-aee9-940e1db91b80.png">
+
 
 Delete Post
->>>>>>
+
+<img width="999" alt="Screenshot 2022-10-15 at 21 35 58" src="https://user-images.githubusercontent.com/96884287/196006773-ca5ddbf0-02d8-40f3-a898-a06a149692a3.png">
+
 
 Edit Post
->>>>>>
+
+<img width="996" alt="Screenshot 2022-10-15 at 21 31 49" src="https://user-images.githubusercontent.com/96884287/196006783-c71379c5-9a61-4340-b446-a7d81c0e331c.png">
+
+
+Add comment
+
+![Screenshot 2022-10-03 155602](https://user-images.githubusercontent.com/96884287/196006261-d94460f7-d5d9-4cdc-b9e3-f1c6e62f72fa.png)
+
 
 
 ### Differences to Design
@@ -327,13 +352,13 @@ Environment variables were stored in an env.py for local development for securit
 
 Design
 
-###### Colour-Scheme
+#### Colour-Scheme
 The main colour schemes for the website are white and violet ground. Black font / violet in some areas.
 
-###### Typography
+#### Typography
 Domine font was used throughout the website. This font is from google fonts and was imported into the style sheet.
 
-###### Imagery
+#### Imagery
 The Website Logo and other pictures have been created using Photopea. 
 
 The hero carousel images(GIF) were taken from Google Images which is a royalty free image site and the signature has been added using Photopea.
@@ -365,10 +390,10 @@ Bootstrap
 This was used for various icons throughout the site / function ability
 
 Favicon.io
-favicon files were created at https://favicon.io/favicon-converter/
+favicon files were created at [Favicon](https://favicon.io/favicon-converter/)
 
 balsamiq
-wireframes were created using balsamiq from https://balsamiq.com/wireframes/desktop/#
+wireframes were created using balsamiq from [balsamiq](https://balsamiq.com/wireframes/desktop/#)
 
 Photpea
 This was used to create the logo in header / and add the sizing / logo on the picture used.
@@ -380,27 +405,49 @@ This was used to compress the hero image for optimal load times
 ### Python Modules Used
 
 Django Class based views (ListView, UpdateView, DeleteView, CreateView) - Used for the classes to create, read, update and delete
+
 messages - Used to pass messages to the toasts to display feedback to the user upon actions
+
 timedelta, date - Date was used in order to search for objects by date and timedelta for searching date ranges
-External Python Modules
+
+
+### External Python Modules
 
 asgiref==3.5.2 -> The asgiref.sync module provides two wrappers that let you go between asynchronous and synchronous code at will, while taking care of the rough edges for you.
+
 cloudinary==1.30.0 -> Cloundinary was set up for use but no custom uploads were made, settings remain for future development
+
 dj-database-url==1.0.0 - Used to parse database url for production environment
+
 dj3-cloudinary-storage==0.0.6 Storage system to work with cloudinary
+
 Django==3.2.15  Framework used to build the application
+
 django-allauth==0.51.0 Used for the sites authentication system, sign up, sign in, logout
+
 django-crispy-forms==1.14.0  Used to style the forms on render
+
 django-summernote==0.8.20.0 Summernote is a simple WYSIWYG editor. django-summernote allows you to embed Summernote into Django very handy.
+
 gunicorn==20.1.0 Installed as dependency with another package
+
 oauthlib==3.2.1 Installed as dependency with another package
+
 psycopg2==2.9.3 Needed for heroku deployment
+
 PyJWT==2.5.0 Installed as dependency with another package
+
 python3-openid==3.2.0 Installed as dependency with another package
+
 pytz==2022.2.1  pytz brings the Olson tz database into Python. This library allows accurate and cross platform timezone calculations using Python 2.4 or higher.
+
 requests-oauthlib==1.3.1 This project provides first-class OAuth library support for Requests. 
+
 sqlparse==0.4.3 Installed as dependency with another package
+
 types-cryptography==3.3.23 Cryptography can be broken down into three different types: Secret Key Cryptography.Testing
+
+
 Test cases and results can be found in the TESTING.md file. This was moved due to the size of the file.
 
 ### Deployment
@@ -492,14 +539,23 @@ This will create a duplicate of the full project in your GitHub Repository.
 ### Credits
 
 All media from the website has been created using Photopea & Google Images.
+
 The readme and testing file has been created using Gareth McGirr steps and paraphrasing information.
+
 The project has been build by myself inspiring from Sizzle and Steak & Code Institute Walkthrough.
+
 Some bugs we’re fixed using Nik’s help and guidance.
+
 Some features have been implemented with help from YouTube tutorials.
-The Event management platform idea has been inspired from here. https://www.mgnevents.co.uk/
+
+The Event management platform idea has been inspired from [here.](https://www.mgnevents.co.uk/)
+
 The texts have been created by me. 
+
 The website has been created following YouTube tutorials and stack overflow. 
+
 To W3Schools a platform that helped me to clarify some not understanding about Js.
+
 Other issues and debugs have been fixed with help from colleagues in Slack.
 
 Big thank you for my mentor Daisy, for all the guidance and unlimited messages send to her.
