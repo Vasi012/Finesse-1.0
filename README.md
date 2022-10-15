@@ -2,15 +2,18 @@
 
 Finesse is a fictional event management platform. This company doesn’t have a fix location as it is mainly an online business.
 
-Our mission is to deal directly with clients, organising future events of all kinds.
-The online platform is simple structure so the users can have an overview of the events that finesse organised.
+Our mission is to deal directly with clients and organising future events of all kinds.
+The online platform is a simple structure, so the users can have an overview of the events organised by finesse.
 
-The website is divided in 2 main pages, the first page ‘home’ will be the page where users are directed once they navigate on the website. 
-The home page is with attention structured to be simple and thick all the boxes for the users. 
-The home page has the ‘’about us’’ section, a ‘’get in touch with us section’’, where users can get in touch with the management of the website directly via email. On the same page, users can see other informations about the website, and what is the company all about. They can subscribe to rechieve newsletters.  
+The website is divided in 2 main pages, the first page ‘home’ will be the page where the users are directed once they navigate on the website. 
+The home page is with attention structured to be simple and tick all the boxes for the users. 
+The home page has ‘’about us’’ section, and ‘’get in touch with us section’’, where users can get in touch with the management of the website directly via email. On the same page, users can see other informations about the website, and what is the company all about. They can also subscribe to recieve newsletters.  
 On the Second page, users can interact with eachother via posts and comments. This section has been designed for members only.
 
-<<<Mock Up>>>
+<img width="1643" alt="Screenshot 2022-10-15 at 23 03 50" src="https://user-images.githubusercontent.com/96884287/196009302-e78c1966-4f11-4466-8485-4e2db440b956.png">
+
+
+The live website can be found [here.](https://finesse-events.herokuapp.com/)
 
 ## User-Experience-Design
 
@@ -20,11 +23,11 @@ On the Second page, users can interact with eachother via posts and comments. Th
 
 #### Site-Goals
 
-The website aims to help users find the organisers for their next event.
+The website aims to help users find the organiser for their next event.
 The website is relatively simple to use, and users can get from a part to another very easily without too much hassle. 
-At the same time, the website comes with a blog section where users can interact with eachoter by posting or commenting to their/others posts. 
+At the same time, the website comes with a blog section where users can interact with each other by posting or commenting to theirs/others posts. 
 
-The site aims to provide customers with a simple and easy way to get in touch with the management and organise their future events, get subscribed to the newsletter and comment, add posts, edite and delete their own posts, liking / unliking posts. 
+The site aims to provide customers with a simple and easy way to get in touch with the management and organise their future events, get subscribed to the newsletter and comment, add posts, edite and delete their own posts, like / unlike posts. 
 
 ### Agile Planning
 
@@ -57,7 +60,7 @@ User with an account can subscribe to the website newsletter and they can be upd
 
 EPIC 5 – Get in touch with us
 
-The get in touch with us button located in the first page has been created to offer users the possibility to get in touch with the management asap. The users can use this button If they are new visitors of this website / users with an account. This button has been implemented that one a form is completed to be send in a format to the staff management and they can get in touch via email. Not needing to contact via phone. 
+The get in touch with us button located in the first page has been created to offer users the possibility to get in touch with the management ASAP. The users can use this button If they are new visitors of this website / users with an account. Once the form has been completed and the send button was clicked, an email will be received by the Finesse managment which will be dealing with the enquire further. 
 
 EPIC 6 - Deployment Epic
 
@@ -116,7 +119,7 @@ As a developer, I need to deploy the project to heroku so that it is live for cu
 
 EPIC 7 - Documentation
 
-Also, after this has been completed, I decided to add a profile section, where users can add, or edit their profile and alow them and other users to preview their profile. 
+Also, after this has been completed, I have decided to add a profile section where users can add, or edit their profile, and alow them and other users to preview their profile. 
 
 On the blog page I as a developer, implemented an edit and delete button, so users can edit or delete their own posts.
 
@@ -170,14 +173,14 @@ Implementation:
 
 Home Page
 
-The home page contains a hero carousel image of events that took place and the Finesse information right after the hero image. This will immediately make it evident to the user, what the purpose of the website is.
+The home page contains a hero carousel image of events that took place and the Finesse information right after the hero image. This will immediately make it evident to the user, and what is the purpose of the website.
 
 Under the about us section there is a button, ‘Get in touch with us. This button will allow users to contact the website management via email in a very quick way reducing the hassle of navigating on the website, searching for company number or email address and after contacting the website management. 
 
-The last section of the home page contains a footer, the footer has been carefully customised to contain 2 other buttons, one of the buttons will contain the working hours and a different button where users can subscribe to websites newsletter (this function will work if the user is logged in to the website.)
+The last section of the home page contains a footer. The footer has been carefully customised to contain 2 other buttons; one of the buttons will contain the working hours, and a different button where users can subscribe to websites newsletter (this function will work if the user is logged in to the website).
 
 
-##### Footer
+### Footer
 
 USER STORY - As a developer, I need to create the footer with social media links and contact information
 
@@ -186,7 +189,7 @@ Implementation:
 <img width="1419" alt="Screenshot 2022-10-15 at 21 12 57" src="https://user-images.githubusercontent.com/96884287/196006074-5c85361d-d2a6-475d-8934-f1cc24e51037.png">
 
 
-A footer has been added to the bottom of the site, this contains a Twitter, Instagram and Facebook link so that users can follow Finesse on social media if they want to keep up to date with special offers not advertised on the website / newsletter. These icons have aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site. The links have been carefully customised to direct users to the personal pages created especially for this project. 
+A footer has been added to the bottom of the site. This contains a Twitter, Instagram and Facebook link so that users can follow Finesse on social media if they want to keep up to date with special offers which are not advertised on the website / newsletter. These icons have aria-labels added to ensure users with assistive screen reading technology and knowing what is the purpose of the links. The icons open in new tabs as they lead users away from the site. The links have been carefully customised to direct users to the personal pages created, especially for this project. 
 
 USER STORY – As a user, I want to be able to subscribe to the website newsletters / to see what the business hours of this company are. 
 
@@ -194,20 +197,20 @@ Implementation:
 
 Create 2 buttons with this required functionality 
 
-The first button has been creating using the customised bootstrap canvas, once clicked on ‘working hours’ this will trigger a small window popping out from the right-hand side whit the business hours of the Company.
+The first button has been created using the customised bootstrap canvas. Once clicked on ‘working hours’, this will trigger a small window popping out from the right-hand side which will display the business hours of the Company.
 
-The second button has been creating using the customised bootstrap canvas, once clicked on ‘Subscribe to Newsletter’ this will trigger a small window popping out from the left-hand side with the subscribe form. This will work just if you are signed into the page otherwise a text will be showed where users are directed to log in to have access to this section. 
+The second button has been created using the customised bootstrap canvas. Once clicked on ‘Subscribe to Newsletter’, this will trigger a small window popping out from the left-hand side with the subscribe form. This will work just if you are signed into the website, otherwise a text will be showed where users are directed to log in to have access to this section. 
 
 ##### Toasts
 
-Custom toasts were added on successful creation of an account, deleting an account, signed into an account, successfully submitted the get in touch with us form, successfully subscribed to newsletters. This will provide feedback to the user to relay information that the mentioned above have been successfully received or updated.
+Custom toasts were added on successful creation of an account, deleting an account, signed into an account, successfully submitted the get in touch with us form, successfully subscribed to newsletters. This will provide feedback to the user to relay information that were mentioned above been successfully received or updated.
 
 
 ##### Favicon 
 
 *A site wide favicon was implemented.* 
 
-This provides an image in the tabs header to allow the user to easily identify the website if they have multiple tabs open.
+This provides an image in the tabs header to allow the users to easily identify the website if they have multiple tabs open.
 
 <img width="37" alt="Screenshot 2022-10-15 at 21 14 48" src="https://user-images.githubusercontent.com/96884287/196006088-e91ce641-d50a-40fa-ac05-cea4a7b981fe.png">
 
@@ -244,7 +247,7 @@ A 500-error page has been displayed to alert users when an internal server error
 
 Base Setup User Stories
 
-The following stories were implemented in order to set up a base structure for all the HTML pages and the core installations and configurations needed to run the application. While these do not show as individual features, they were stories completed that were needed to implement all the stories above.
+The following stories were implemented in order to set up a base structure for all the HTML pages, the core installations, and configurations needed to run the application. While these do not show as individual features, they were stories completed that were needed to implement all the stories above.
 
 As a developer, I need to create the base.html page and structure so that other pages can reuse the layout.
 
@@ -255,7 +258,7 @@ As a developer, I need to set up the project so that it is ready for implementin
 
 Features Left to Implement
 
-In a future release I would like to implement messageing system that allow users to communicate with website owners without nedding of a 3rd party such as email. On the home page I would like to implement a rating system so users can see reviews left by others and trust the website. 
+In a future release, I would like to implement messageing system that allows users to communicate with website owners without nedding of a 3rd party such as email. On the home page, I would like to implement a rating system, so users can see reviews left by others and trust the website. 
 
 ### The-Skeleton-Plane
 
@@ -337,16 +340,16 @@ Add comment
 
 ### Differences to Design
 
-Initially the website was designed to be shared across multiple pages, however this has been changing in order to provide simple and user-friendly interface. This change reflects users a reduced features that probably my end up unused, restructured in a one-page content. 
+Initially the website was designed to be shared across multiple pages. However, this has been changed in order to provide simple and user-friendly interface. This change reflects users a reduced features that probably my end up unused, restructured in a one-page content. 
 
 
 ### Database-Design
-The database was designed to allow CRUD functionality to be available to registered users, when signed in. The user model is at the heart of the application as it is connected the blog side, linked by primary/foreign key relationships many to many and so on.
+The database was designed to allow CRUD functionality to be available to registered users when signed in. The user model is at the heart of the application as it is connected the blog side and linked by primary/foreign key relationships many to many and so on.
 
 
 ### Security
 
-Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information was added the repository. In production, these variables were added to the heroku config vars within the project.
+Environment variables were stored in an env.py for local development and for security purposes to ensure no secret keys, api keys or sensitive information was added the repository. In production, these variables were added to the heroku config vars within the project.
 
 ### The-Surface-Plane
 
@@ -508,7 +511,21 @@ Click deploy
 
 The app should now be deployed.
 
-The live link can be found here: Live Site
+The live link can be found here: [Live Site](https://finesse-events.herokuapp.com/)
+
+
+## Errors during deployment.
+
+During deployment I have encounter some errors.
+Firstly the static files wasan't loading.
+Secondly the debug buton has been changed from os.environ('DEVELOPMENT') to True, to be able to see where the errors are coming from. After that, the debug button has been changed back into False, trying to check again if the deployment works, and after came back to os.environ('DEVELOPMENT').
+
+This resulted in repetated commits, with the same or similar message. 
+
+![Screenshot 2022-10-15 at 23 07 17 2](https://user-images.githubusercontent.com/96884287/196009481-ad61948c-b173-4007-be52-748a7075f565.png)
+
+As this was my first time when I have worked with django, I didn't know how to fix what was wrong, resulting in this repeted commits. 
+
 
 Run Locally
 
@@ -558,5 +575,5 @@ To W3Schools a platform that helped me to clarify some not understanding about J
 
 Other issues and debugs have been fixed with help from colleagues in Slack.
 
-Big thank you for my mentor Daisy, for all the guidance and unlimited messages send to her.
+Big thank you for my mentor Daisy, for all the guidance. 
 

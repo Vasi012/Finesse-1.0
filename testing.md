@@ -18,14 +18,14 @@ Steps:
 Expected:
 
 After filing up the required fields, and clicking on the 'Sign Up' button, the user will receive an email with the confirmation of his account being created.
-He will need to click on the link submitted to its account and he will be redirected to a confirmation page informing the user about its account being activated.
-Now the user can navigate to 'Log in' and insert the details, click on the 'Sign in' button and he will be redirected to the home page.
+The users will need to click on the link submitted to the account and they will be redirected to a confirmation page informing the users about the account being activated.
+Now the users can navigate to 'Log in' and insert the details, click on the 'Sign in' button and they will be redirected to the home page.
 
 Actual:
 
 After filing up the required fields, and clicking on the 'Sign Up' button, the user will receive an email with the confirmation of his account being created.
-He will need to click on the link submitted to its account and he will be redirected to a confirmation page informing the user about its account being activated.
-Now the user can navigate to 'Log in' and insert the details, click on the 'Sign in' button and he will be redirected to the home page.
+The users will need to click on the link submitted to the account and they will be redirected to a confirmation page informing the users about the account being activated.
+Now the users can navigate to 'Log in' and insert the details, click on the 'Sign in' button and they will be redirected to the home page.
 
 
 Test 2 - *Description*:
@@ -42,12 +42,12 @@ Steps:
 Expected:
 
 After filling up the fields created when registering their account, they can click the 'Login' button. 
-Once the 'Login' button has been clicked the user will be redirected to the Home page.
+Once the 'Login' button has been clicked the users will be redirected to the Home page.
 
 Actual:
 
 After filling up the fields created when registering their account, they can click the 'Login' button. 
-Once the 'Login' button has been clicked the user will be redirected to the Home page.
+Once the 'Login' button has been clicked the users will be redirected to the Home page.
 
 
 Test 3 - *Description*:
@@ -56,9 +56,9 @@ Ensure a user can Sign out.
 
 Steps:
 
-1. If the user is logged into its account and he prefers to sign out, he can click on the 'Account' button from the Nav bar.
+1. If the users are logged into its account and they prefer to sign out, they can click on the 'Account' button from the Nav bar.
 2. User can select 'Logout'.
-3. After clicking 'Logout', the user will be redirected to a page where he will need to confirm that he will like to Sign out.
+3. After clicking 'Logout', the users will be redirected to a page where they will need to confirm to Sign out.
 
 Expected:
 
@@ -113,23 +113,24 @@ Steps:
 
 Expected:
 
-If site user is not authenticated, the user will not be allowed to fill up details in the OffCanvas popup and will be informed that they will need too logged into their account to be able to access that field.
-If user is authenticated, they can fill up the form and subscribe to the newsletter. 
+If site users are not authenticated, the users will not be allowed to fill up details in the OffCanvas popup, and will be informed that will need to be logged into their account to be able to access that field.
+If the users are authenticated, they can fill up the form and subscribe to the newsletter. 
 
-In order to do not supra solicit-ate the Data Base:
-  1. A connected user can insert an email address just once and if they try to reuse the same address a message will be showed informing them about this.
-  2. A user has to insert the correct email address [example@email.com]. If not, a message will be showed informing the user about the error.
-  3. The 'Subscribe' button will be deactivated initially until the server checks if there is already the same email address.
+In order to do not supra solicitate the Data Base:
+
+1. The users which are connected to thei account are able to insert an email address just once. If they try to reuse the same address, a message will be displayed informing them about this.
+2. A user has to insert the correct email address [example@email.com]. If not, a message will be showed informing the user about the error.
+3. The 'Subscribe' button will be deactivated initially until the server checks if there is already the same email address.
 
 Actual:
 
-If site user is not authenticated, the user will not be allowed to fill up details in the OffCanvas popup and will be informed that they will need too logged into their account to be able to access that field.
-If user is authenticated, they can fill up the form and subscribe to the newsletter. 
+If the site users are not authenticated, the users will not be allowed to fill up details in the OffCanvas popup, and will be informed that they will need to be logged into their account to be able to access that field.
+If the users are authenticated, they can fill up the form and subscribe to the newsletter. 
 
 
 Test 5 - *Description*
 
-Ensure all navigation links works on all pages.
+Ensure all navigation links work on all pages.
 
 Steps:
 
@@ -141,16 +142,16 @@ Steps:
 
 ##### Links
 
-Name                    -> HTML page
-Home                    -> index.html
-Blog                    -> blog.html
-Logout, Login, Register -> Sign up all auth page.
-Add post                -> add_post.html
-Update post             -> update_post.html
-Delete Post             -> delete_post.html
-Edit Profile            -> edit_profile_page.html
-Account Settings        -> edit_profile.html
-Preview Profile.        -> user_profile.html
+1. Name                    -> HTML page
+2. Home                    -> index.html
+3. Blog                    -> blog.html
+4. Logout, Login, Register -> Sign up all auth page.
+5. Add post                -> add_post.html
+6. Update post             -> update_post.html
+7. Delete Post             -> delete_post.html
+8. Edit Profile            -> edit_profile_page.html
+9. Account Settings        -> edit_profile.html
+10. Preview Profile.        -> user_profile.html
 
 Expected:
 
@@ -166,7 +167,7 @@ All navigation links direct to the correct pages as expected.
 Test 6 - *Description*
 
 The blog section is restricted for members only.
-If user want to be able to see the blog page he will need to create an account and log into this account.
+If the users want to be able to see the blog page, they will need to create an account and log into this account.
 
 Steps:
 
@@ -181,20 +182,20 @@ Steps:
 
 Expected:
 
-User can navigate to blog.html (Blog), just after they login into their account. 
-Once user is logged int their account they can now preview the blog section, add a post, edit or delete their post and add a comment.
+The users can navigate to blog.html (Blog), just after they login into their account. 
+Once the users are logged into their account will be able preview the blog section, add a post, edit or delete their post and add a comment.
 
 Actual: 
 
-User can navigate to blog.html (Blog), just after they login into their account. 
-Once user is logged int their account they can now preview the blog section, add a post, edit or delete their post and add a comment.
+The users can navigate to blog.html (Blog), just after they login into their account. 
+Once the users are logged into their account will be able preview the blog section, add a post, edit or delete their post and add a comment.
 
 
 ### Blog & Profiles
 
 Test 7 - *Description*
 
-User can preview other people profile by clicking on a icon next to the persons comment.
+User can preview other people profile by clicking on an icon next to the person's comment.
 
 
 ![image1](https://user-images.githubusercontent.com/96884287/195994806-a06882ad-fb55-41c1-a98c-05a977fe31e7.jpeg)
@@ -209,7 +210,7 @@ Steps:
 5. Click on the open book icon next to user username.
 6. You will be redirected to preview that user profile.
 
-_A user can update their own profile by following the next steps_
+The users can update their own profile by following the next steps
     1. Click on the 'Account' in navbar.
     2. Click on Account Settings.
         - Add a First and Last name.
@@ -225,22 +226,22 @@ _A user can update their own profile by following the next steps_
     7. Click on Account in the navbar.
     8. Click on Preview Profile
 
-Now you can see what other user can see when they navigate on your profile.
+Now you can see what other users can see when they navigate on your profile.
 
 Expected:
 
-If a user did not update their profile, some default information will be in-place.
-If a user completed the above steps, themselves or other users are now able to see their profile. (Preview Profile).
+If the users did not update their profile, some default information will be in-place.
+If the users completed the above steps, themselves or other users are now able to see their profile. (Preview Profile).
 
 Actual:
 
-If a user did not update their profile, some default information will be in-place.
-If a user completed the above steps, themselves or other users are now able to see their profile. (Preview Profile).
+If the users did not update their profile, some default information will be in-place.
+If the users completed the above steps, themselves or other users are now able to see their profile. (Preview Profile).
 
 
 ## Footer Page
 
-Testing was performed on the footer links by clicking the bootstrap icons and ensuring that the Facebook icon opened Facebook in new tab, the Instagram icon opens Instagram in a new tab and the Twitter icon opened Twitter in a new tab.
+Testing was performed on the footer links by clicking the bootstrap icons, and ensuring that the Facebook icon opened Facebook in new tab, the Instagram icon opens Instagram in a new tab and the Twitter icon opened Twitter in a new tab.
 These behave as expected. User is redirected to the official pages created by Finesse.
 Testing was also performed on the 2 other buttons: 'Working Hours' and 'Subscribe to Newsletter', and both behave as expected.
 
@@ -269,7 +270,7 @@ WCAG 2.1 Coding best practices being followed.
 
 Test - 8 *Description*
 
-Each page has been tested to ensure that they met the criteria required in WCAG 2.1.
+Each page has been tested to ensure that it meets the criteria required in WCAG 2.1.
 
 The testing has been conducted by navigating on each page and use WAVE.
 
@@ -299,7 +300,7 @@ Post Details:
 ![image11](https://user-images.githubusercontent.com/96884287/195994877-ccb2793e-bbe2-45be-a544-7d3b56b2afe0.jpeg)
 
 We have 4 errors here and this is becose we pull from the backend the href used to allow users to navigate to other users profile.
-Alos there is an error with the like button as there is just an icon (Hear) and no text. 
+Also, there is an error with the like button as there is just an icon (Heart) and no text. 
 
 Add post
 
@@ -307,7 +308,7 @@ Results:
 
 ![image6](https://user-images.githubusercontent.com/96884287/195994978-e9d45190-9222-49dc-9fe9-8999278730d5.jpeg)
 
-We have a contrast error as I'm unable to change the link color of the picture used. However, if a user hovers over this he will be able to see it in a darker colour and the error will dissaper. 
+We have a contrast error as I'm unable to change the link color of the picture used. However, if a user hovers over this, will be able to see it in a darker colour and the error will dissaper. 
 
 Edit Post, Preview Profile, Edit Profile
 
@@ -330,7 +331,7 @@ Results:
 
 ![image10](https://user-images.githubusercontent.com/96884287/195995122-7540db17-a836-4fe0-8691-e490f6bdf6ac.jpeg)
 
-We have a contrast error as I'm unable to change the link color of the picture used. However, if a user hovers over this he will be able to see it in a darker colour and the error will dissaper. 
+We have a contrast error as I'm unable to change the link color of the picture used. However, if a user hovers over this, will be able to see it in a darker colour and the error will dissaper. 
 
 Change Email
 
@@ -366,7 +367,7 @@ Post Detail:
 
 Test - 10 *Description*
 
-Due to a last update the page pep8 used to test the python code is not accessible anymore. Therfore tests were performed inside the terminal using flake8.
+Due to a last update the page pep8 used to test the python code is not accessible anymore. Therfore, tests were performed inside the terminal using flake8.
 
 How do you use it?
 
@@ -402,9 +403,9 @@ finesseBlog -> No issues have been identify here, and everything works and run a
 
 Test 10 - *Description*
 
-The JavaScript code was run through JSHint JavaScript validator. This validator flagged up issues with undefined variables as i had forgotten to use the let keyword. This was fixed and the only warnings remained were that they were unused variables. The functions were called via on click from the HTML elements themselves, so are in fact being used.
+The JavaScript code was run through JSHint JavaScript validator. This validator flagged up issues with undefined variables as i have forgotten to use the let keyword. This was fixed and the only warnings remained were that they were unused variables. The functions were called via on click from the HTML elements themselves, so are in fact being used.
 
-Other errors have been because the browser doesn't use ES6 and JSHint couldn't run them.
+Other errors have occured because the browser doesn't use ES6 and JSHint couldn't run them.
 
 JSHint Validator: 
 
@@ -436,12 +437,12 @@ Steps:
 
     ![Screenshot 2022-10-15 at 16 54 08](https://user-images.githubusercontent.com/96884287/195996026-dd1d2136-82f0-4145-a451-3da0e2e9e85f.jpg)
     
-In this Lighthouse report we can see that everything works as expected, the performance my vary as the blogs adds full size pictures in the blog section, also the home page has uses gifs for in a carousel post for the hero image, therfore this will bring the performance a little bit low. However this depends on user internet speed.
+In this Lighthouse report we can see that everything works as expected. The performance my vary as the blog adds full size pictures in the blog section, also the home page has used gifs for in a carousel post for the hero image. Therfore, this will bring the performance a little bit low. However, this depends on user's internet speed.
     
     
 Expected:
 
-Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
+Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlaped.
 
 Actual:
 
@@ -459,7 +460,8 @@ Everything works as expected.
 
 Bugs
 
-At this time, I couldn't see any bugs. I will conduct daily tests in order to prevent bugs to appear, and fix them in the 2.0 version of the website.
+A bug has been noticed when adding or updating posts on some screen devices.
+I will conduct daily tests in order to prevent bugs to appear, and fix them in the 2.0 version of the website. 
 
 
 
