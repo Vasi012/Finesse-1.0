@@ -434,6 +434,11 @@ Steps:
 4. Set the zoom to 50%.
 5. Click and drag the responsive window to maximum width.
 
+    ![Screenshot 2022-10-15 at 16 54 08](https://user-images.githubusercontent.com/96884287/195996026-dd1d2136-82f0-4145-a451-3da0e2e9e85f.jpg)
+    
+In this Lighthouse report we can see that everything works as expected, the performance my vary as the blogs adds full size pictures in the blog section, also the home page has uses gifs for in a carousel post for the hero image, therfore this will bring the performance a little bit low. However this depends on user internet speed.
+    
+    
 Expected:
 
 Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
