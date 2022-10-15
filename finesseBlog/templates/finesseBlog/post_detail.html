@@ -10,7 +10,7 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="post-subtitle" style="color: white; background-color: #8500C7;">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
@@ -35,17 +35,15 @@
                 </p>
                 <div class="row">
 
-                    <div class="col-1">
+                    <div class="col-4">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="bi bi-heart-fill"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="bi bi-heart-fill"></i></button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="bi bi-heart-fill"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="bi bi-heart-fill"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
@@ -55,7 +53,7 @@
                             <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>
                     </div>
-                    <div class="col-1">
+                    <div class="col-2">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="bi bi-chat-left"></i></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
@@ -67,8 +65,10 @@
         </div>
     </div>
     <div class="text-center">
-        <small><a href="{% url 'update_post' post.pk %}" class="editpost">Edit Post <i class="bi bi-pencil-square"></i></a></small>
-        <small><a href="{% url 'delete_post' post.pk %}" class="deletepost">Delete Post <i class="bi bi-trash"></i></a></small>
+        <small><a href="{% url 'update_post' post.pk %}" class="editpost">Edit Post <i
+                    class="bi bi-pencil-square"></i></a></small>
+        <small><a href="{% url 'delete_post' post.pk %}" class="deletepost">Delete Post <i
+                    class="bi bi-trash"></i></a></small>
     </div>
     <div class="row">
         <div class="col">
@@ -85,25 +85,15 @@
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {% if comment.user.profile.profile_pic %}
-                        <img src="{{ comment.user.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle">
+                        <img src="{{ comment.user.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle" alt="User profile picture">
                         {% else %}
                         <img src="{% static 'images/defaultpic.jpeg' %}" width=50 height=50 alt="Default Picture">
                         {% endif %}
                         {{ comment.name }}
-                        (<a href="{% url 'show_profile_page' comment.user.profile.id %}"><i class="bi bi-book-fill"
-                                style="
-                                    padding-left: 10px;
-                                "></i></a> |
-                        <span class=" text-muted font-weight-normal">
-                            <a href="#" aria-label="To edit your comment press here"><i class="bi bi-pen-fill" style="
-                                padding-left: 10px;
-                            "></i></a> |
-                            <a href="#" aria-label="To delete your comment press here"><i class="bi bi-trash-fill"
-                                    style="
-                                padding-left: 10px;
-                            "></i></a>)
-                            <!-- The comment's created date goes here -->
-                            {{ comment.created_on }}</span> wrote:
+                        <a href="{% url 'show_profile_page' comment.user.profile.id %}"><i class="bi bi-book-fill"
+                                style="padding-left: 10px;" alt="Path to user profile"></i></a>
+                        <!-- The comment's created date goes here -->
+                        {{ comment.created_on }}</span> wrote:
                     </p>
                     <!-- The body of the comment -->
 

@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-
+from ckeditor.fields import RichTextField
 # Keep drafts and published posts separated
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -17,7 +17,7 @@ class Post(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-    content = models.TextField()
+    content = RichTextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(

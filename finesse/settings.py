@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'eventsM',
     'django_summernote',
     'finesseBlog',
+    'ckeditor',
 ]
 
 
